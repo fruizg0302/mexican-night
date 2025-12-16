@@ -1,23 +1,40 @@
 {
   "name": "mexican-night",
-  "displayName": "mexican-night",
-  "description": "A clean Visual Studio Code theme that celebrates the lights of  Mexico City at night",
+  "displayName": "Mexican Night",
+  "description": "A vibrant dark theme celebrating Mexico City nights with optimized Python, Ruby, and JavaScript/TypeScript syntax highlighting",
   "version": "0.0.1",
   "type": "module",
   "publisher": "wowzontle",
+  "author": {
+    "name": "Fernando Ruiz Guzman"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/fruizg0302/mexican-night"
   },
+  "bugs": {
+    "url": "https://github.com/fruizg0302/mexican-night/issues"
+  },
+  "homepage": "https://github.com/fruizg0302/mexican-night#readme",
   "keywords": [
     "theme",
     "dark theme",
+    "color-theme",
     "mexican",
     "night",
-    "mexico city"
+    "mexico city",
+    "python",
+    "ruby",
+    "javascript",
+    "typescript"
   ],
   "engines": {
     "vscode": "^1.74.0"
+  },
+  "galleryBanner": {
+    "color": "#16161E",
+    "theme": "dark"
   },
   "scripts": {
     "build": "node src/generator.js",
