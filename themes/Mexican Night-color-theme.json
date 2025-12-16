@@ -306,6 +306,596 @@
   },
   "tokenColors": [
     {
+      "name": "Ruby Comments",
+      "scope": [
+        "comment.line.number-sign.ruby",
+        "comment.block.documentation.ruby"
+      ],
+      "settings": {
+        "foreground": "#828bb8",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Ruby Keywords (def, class, module)",
+      "scope": [
+        "keyword.control.def.ruby",
+        "keyword.control.class.ruby",
+        "keyword.control.module.ruby",
+        "keyword.control.start-block.ruby"
+      ],
+      "settings": {
+        "foreground": "#E4007C"
+      }
+    },
+    {
+      "name": "Ruby Control Keywords",
+      "scope": "keyword.control.ruby",
+      "settings": {
+        "foreground": "#E4007C"
+      }
+    },
+    {
+      "name": "Ruby Flow Keywords (if, else, return) - Italic",
+      "scope": [
+        "keyword.control.conditional.ruby",
+        "keyword.control.loop.ruby"
+      ],
+      "settings": {
+        "foreground": "#E4007C",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Ruby Pseudo Methods (break, next, return, yield)",
+      "scope": "keyword.control.pseudo-method.ruby",
+      "settings": {
+        "foreground": "#E4007C",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Ruby Special Methods (require, include, attr_accessor, private)",
+      "scope": "keyword.other.special-method.ruby",
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "Ruby Method Definitions",
+      "scope": "entity.name.function.ruby",
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "Ruby Class Names",
+      "scope": "entity.name.type.class.ruby",
+      "settings": {
+        "foreground": "#FFD700"
+      }
+    },
+    {
+      "name": "Ruby Module Names",
+      "scope": "entity.name.type.module.ruby",
+      "settings": {
+        "foreground": "#FFD700"
+      }
+    },
+    {
+      "name": "Ruby Inherited Class - Italic",
+      "scope": "entity.other.inherited-class.ruby",
+      "settings": {
+        "foreground": "#FFD700",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Ruby Support Classes",
+      "scope": "support.class.ruby",
+      "settings": {
+        "foreground": "#FFD700"
+      }
+    },
+    {
+      "name": "Ruby Kernel Methods (puts, print, lambda, proc)",
+      "scope": "support.function.kernel.ruby",
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "Ruby Built-in Functions",
+      "scope": "support.function.builtin.ruby",
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "Ruby Instance Variables (@var)",
+      "scope": "variable.other.readwrite.instance.ruby",
+      "settings": {
+        "foreground": "#FF9E64"
+      }
+    },
+    {
+      "name": "Ruby Class Variables (@@var)",
+      "scope": "variable.other.readwrite.class.ruby",
+      "settings": {
+        "foreground": "#ff79c6"
+      }
+    },
+    {
+      "name": "Ruby Global Variables ($var) - Warning Color",
+      "scope": [
+        "variable.other.readwrite.global.ruby",
+        "variable.other.readwrite.global.pre-defined.ruby"
+      ],
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Ruby self/super - Italic Warning",
+      "scope": [
+        "variable.language.self.ruby",
+        "variable.language.super.ruby"
+      ],
+      "settings": {
+        "foreground": "#FF69B4",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Ruby __FILE__ and __LINE__",
+      "scope": "variable.language.ruby",
+      "settings": {
+        "foreground": "#FF9E64"
+      }
+    },
+    {
+      "name": "Ruby Variable Sigils (@, @@, $)",
+      "scope": "punctuation.definition.variable.ruby",
+      "settings": {
+        "foreground": "#a9b1d6"
+      }
+    },
+    {
+      "name": "Ruby Method Parameters - Italic",
+      "scope": "variable.parameter.function.ruby",
+      "settings": {
+        "foreground": "#FF9E64",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Ruby Block Parameters - Italic",
+      "scope": "variable.other.block.ruby",
+      "settings": {
+        "foreground": "#FF9E64",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Ruby Block Parameter Pipes (|x, y|)",
+      "scope": "punctuation.separator.variable.ruby",
+      "settings": {
+        "foreground": "#828bb8"
+      }
+    },
+    {
+      "name": "Ruby Constants (CONSTANT)",
+      "scope": "variable.other.constant.ruby",
+      "settings": {
+        "foreground": "#FF9E64"
+      }
+    },
+    {
+      "name": "Ruby Symbols (:symbol)",
+      "scope": [
+        "constant.other.symbol.ruby",
+        "constant.language.symbol.ruby"
+      ],
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "Ruby Hash Key Symbols (key: value)",
+      "scope": [
+        "constant.other.symbol.hashkey.ruby",
+        "constant.other.symbol.hashkey.parameter.function.ruby"
+      ],
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Ruby nil, true, false",
+      "scope": [
+        "constant.language.nil.ruby",
+        "constant.language.boolean.ruby"
+      ],
+      "settings": {
+        "foreground": "#FF9E64"
+      }
+    },
+    {
+      "name": "Ruby Numbers",
+      "scope": "constant.numeric.ruby",
+      "settings": {
+        "foreground": "#FF9E64"
+      }
+    },
+    {
+      "name": "Ruby Strings",
+      "scope": [
+        "string.quoted.single.ruby",
+        "string.quoted.double.interpolated.ruby",
+        "string.quoted.other.ruby",
+        "string.quoted.other.interpolated.ruby"
+      ],
+      "settings": {
+        "foreground": "#50fa7b"
+      }
+    },
+    {
+      "name": "Ruby String Interpolation Delimiters (#{})",
+      "scope": [
+        "punctuation.section.embedded.begin.ruby",
+        "punctuation.section.embedded.end.ruby"
+      ],
+      "settings": {
+        "foreground": "#E4007C"
+      }
+    },
+    {
+      "name": "Ruby Embedded Code in Interpolation",
+      "scope": [
+        "meta.embedded.line.ruby",
+        "source.ruby.embedded.source"
+      ],
+      "settings": {
+        "foreground": "#c0caf5"
+      }
+    },
+    {
+      "name": "Ruby Heredocs",
+      "scope": "string.unquoted.heredoc.ruby",
+      "settings": {
+        "foreground": "#50fa7b"
+      }
+    },
+    {
+      "name": "Ruby Regular Expressions",
+      "scope": [
+        "string.regexp.ruby",
+        "string.regexp.interpolated.ruby"
+      ],
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "Ruby Backtick Commands",
+      "scope": "string.interpolated.ruby",
+      "settings": {
+        "foreground": "#50fa7b"
+      }
+    },
+    {
+      "name": "Ruby Assignment Operators",
+      "scope": [
+        "keyword.operator.assignment.ruby",
+        "keyword.operator.assignment.augmented.ruby"
+      ],
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Ruby Comparison Operators",
+      "scope": "keyword.operator.comparison.ruby",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Ruby Logical Operators",
+      "scope": "keyword.operator.logical.ruby",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Ruby Arithmetic Operators",
+      "scope": "keyword.operator.arithmetic.ruby",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Ruby Other Operators",
+      "scope": "keyword.operator.other.ruby",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Ruby Namespace Separator (::)",
+      "scope": "punctuation.separator.namespace.ruby",
+      "settings": {
+        "foreground": "#a9b1d6"
+      }
+    },
+    {
+      "name": "Ruby Inheritance Separator (<)",
+      "scope": "punctuation.separator.inheritance.ruby",
+      "settings": {
+        "foreground": "#a9b1d6"
+      }
+    },
+    {
+      "name": "Ruby Method Call Separator (.)",
+      "scope": "punctuation.separator.method.ruby",
+      "settings": {
+        "foreground": "#a9b1d6"
+      }
+    },
+    {
+      "name": "Ruby Hash Rocket (=>)",
+      "scope": "punctuation.separator.key-value",
+      "settings": {
+        "foreground": "#E4007C"
+      }
+    },
+    {
+      "name": "Rails ActiveRecord Methods",
+      "scope": "support.function.activerecord.rails",
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "Rails Validations",
+      "scope": "support.function.validation.rails",
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "Rails Callbacks",
+      "scope": "support.function.callback.rails",
+      "settings": {
+        "foreground": "#50fa7b"
+      }
+    },
+    {
+      "name": "Rails View Helpers",
+      "scope": "support.function.view.rails",
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "Rails Routing Methods",
+      "scope": "support.function.routing.rails",
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "ERB Delimiters (<%, %>)",
+      "scope": [
+        "punctuation.section.embedded.begin.erb",
+        "punctuation.section.embedded.end.erb",
+        "punctuation.section.embedded.ruby"
+      ],
+      "settings": {
+        "foreground": "#E4007C"
+      }
+    },
+    {
+      "name": "ERB Comments",
+      "scope": [
+        "comment.block.erb",
+        "comment.line.number-sign.erb"
+      ],
+      "settings": {
+        "foreground": "#828bb8",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "JavaScript Comments",
+      "scope": [
+        "comment.block.js",
+        "comment.line.double-slash.js",
+        "comment.block.documentation.js"
+      ],
+      "settings": {
+        "foreground": "#565f89",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "JavaScript Keywords",
+      "scope": [
+        "keyword.control.js",
+        "keyword.control.flow.js",
+        "keyword.control.conditional.js",
+        "keyword.control.loop.js",
+        "storage.type.js",
+        "storage.type.function.js",
+        "storage.type.class.js"
+      ],
+      "settings": {
+        "foreground": "#bb9af7"
+      }
+    },
+    {
+      "name": "JavaScript Function Names",
+      "scope": [
+        "entity.name.function.js",
+        "meta.function-call.js",
+        "support.function.js"
+      ],
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "JavaScript Arrow Functions",
+      "scope": "storage.type.function.arrow.js",
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "JavaScript Parameters",
+      "scope": [
+        "variable.parameter.js",
+        "meta.parameter.js"
+      ],
+      "settings": {
+        "foreground": "#ff9e64",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "JavaScript This/Super",
+      "scope": [
+        "variable.language.this.js",
+        "variable.language.super.js"
+      ],
+      "settings": {
+        "foreground": "#ff79c6",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "JavaScript Constants",
+      "scope": [
+        "constant.language.js",
+        "constant.language.null.js",
+        "constant.language.undefined.js",
+        "constant.language.nan.js",
+        "constant.language.infinity.js"
+      ],
+      "settings": {
+        "foreground": "#ff9e64"
+      }
+    },
+    {
+      "name": "JavaScript Template Literals",
+      "scope": [
+        "string.template.js",
+        "meta.template.expression.js"
+      ],
+      "settings": {
+        "foreground": "#9ece6a"
+      }
+    },
+    {
+      "name": "JavaScript Template Expressions",
+      "scope": [
+        "punctuation.definition.template-expression.begin.js",
+        "punctuation.definition.template-expression.end.js",
+        "meta.embedded.line.js"
+      ],
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "JavaScript Classes",
+      "scope": [
+        "entity.name.type.class.js",
+        "entity.name.type.js",
+        "support.class.js"
+      ],
+      "settings": {
+        "foreground": "#e0af68"
+      }
+    },
+    {
+      "name": "JavaScript Import/Export",
+      "scope": [
+        "keyword.control.import.js",
+        "keyword.control.export.js",
+        "keyword.control.from.js",
+        "keyword.control.as.js"
+      ],
+      "settings": {
+        "foreground": "#bb9af7"
+      }
+    },
+    {
+      "name": "JavaScript Async/Await",
+      "scope": [
+        "keyword.control.flow.js",
+        "storage.modifier.async.js",
+        "keyword.control.await.js"
+      ],
+      "settings": {
+        "foreground": "#bb9af7"
+      }
+    },
+    {
+      "name": "JavaScript Decorators",
+      "scope": [
+        "meta.decorator.js",
+        "punctuation.decorator.js"
+      ],
+      "settings": {
+        "foreground": "#40E0D0"
+      }
+    },
+    {
+      "name": "JavaScript Object Properties",
+      "scope": [
+        "meta.object-literal.key.js",
+        "variable.other.property.js"
+      ],
+      "settings": {
+        "foreground": "#c0caf5"
+      }
+    },
+    {
+      "name": "JavaScript Operators",
+      "scope": [
+        "keyword.operator.js",
+        "keyword.operator.assignment.js",
+        "keyword.operator.comparison.js",
+        "keyword.operator.arithmetic.js",
+        "keyword.operator.logical.js",
+        "keyword.operator.ternary.js"
+      ],
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "JSX Component Tags",
+      "scope": [
+        "entity.name.tag.js",
+        "support.class.component.js"
+      ],
+      "settings": {
+        "foreground": "#e0af68"
+      }
+    },
+    {
+      "name": "JSX Attributes",
+      "scope": [
+        "entity.other.attribute-name.js",
+        "meta.tag.attributes.js"
+      ],
+      "settings": {
+        "foreground": "#bb9af7"
+      }
+    },
+    {
       "name": "Comment",
       "scope": [
         "comment",
