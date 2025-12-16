@@ -1,19 +1,24 @@
 // Theme Generator for Mexican Night
 // Combines all modules to generate the final theme JSON
 
-const fs = require('fs');
-const path = require('path');
-const { palette } = require('./colors/palette');
-const { baseTheme } = require('./templates/base-theme');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { palette } from './colors/palette.js';
+import { baseTheme } from './templates/base-theme.js';
+import { getUIColors } from './colors/ui.js';
+import { syntaxColors, getSemanticTokenColors, getTokenColors } from './colors/syntax.js';
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Function to generate the complete theme
 function generateTheme() {
-  // Import UI colors and syntax colors (to be created)
-  const uiColors = require('./colors/ui');
-  const syntaxColors = require('./colors/syntax');
   
   // Enhanced Ruby syntax highlighting
-  const rubyScopes = {
+  const rubyScopes = [
     // Ruby comments
     {
       name: "Ruby Comments",
@@ -149,10 +154,10 @@ function generateTheme() {
         foreground: syntaxColors.supportFunction
       }
     }
-  };
+  ];
 
   // Enhanced JavaScript/TypeScript syntax highlighting
-  const javascriptScopes = {
+  const javascriptScopes = [
     // JS/TS comments
     {
       name: "JavaScript Comments",
@@ -373,14 +378,14 @@ function generateTheme() {
         foreground: syntaxColors.jsxAttribute
       }
     }
-  };
+  ];
 
   // Combine all parts
   const theme = {
     ...baseTheme,
-    colors: uiColors.getUIColors(palette),
-    semanticTokenColors: syntaxColors.getSemanticTokenColors(palette),
-    tokenColors: syntaxColors.getTokenColors(palette)
+    colors: getUIColors(palette),
+    semanticTokenColors: getSemanticTokenColors(palette),
+    tokenColors: getTokenColors(palette)
   };
   
   return theme;
@@ -406,12 +411,12 @@ function main() {
 }
 
 // Export for use in other scripts
-module.exports = {
+export {
   generateTheme,
   writeTheme
 };
 
-// Run if called directly
-if (require.main === module) {
+// Run if called directly (ES module check)
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }

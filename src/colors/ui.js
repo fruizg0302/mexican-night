@@ -338,4 +338,4 @@ function getUIColors(palette) {
   };
 }
 
-module.exports = { getUIColors };
+export { getUIColors };

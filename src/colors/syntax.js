@@ -1,6 +1,8 @@
 // Syntax Highlighting Colors for Mexican Night Theme
 // Maps palette colors to programming language tokens
 
+import { palette } from './palette.js';
+
 function getSemanticTokenColors(palette) {
   return {
     "parameter.declaration": {
@@ -1227,7 +1229,7 @@ function getTokenColors(palette) {
   ];
 }
 
-module.exports = {
+export {
   getSemanticTokenColors,
   getTokenColors,
 };

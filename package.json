@@ -3,6 +3,7 @@
   "displayName": "mexican-night",
   "description": "A clean Visual Studio Code theme that celebrates the lights of  Mexico City at night",
   "version": "0.0.1",
+  "type": "module",
   "publisher": "wowzontle",
   "repository": {
     "type": "git",

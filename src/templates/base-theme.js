@@ -121,7 +121,7 @@ const tokenColorCategories = [
   'Markup - Table'
 ];
 
-module.exports = {
+export {
   baseTheme,
   semanticTokenCategories,
   tokenColorCategories
