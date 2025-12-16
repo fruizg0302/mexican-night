@@ -131,12 +131,22 @@ The theme references these color variables from palette.js:
 5. Use sample files in `samples/` to verify syntax highlighting
 6. Inspect tokens with `Developer: Inspect Editor Tokens and Scopes` to debug scopes
 
+**See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for detailed development guide.**
+
 ## Important Notes
 
-- **Publisher name**: Currently "your-publisher-name" in package.json - must be updated before publishing
-- **Repository URL**: Currently placeholder - update before publishing
+- **Publisher name**: Set to "wowzontle" in package.json
+- **Repository URL**: https://github.com/fruizg0302/mexican-night
 - **Theme icon**: No icon defined - add "icon" field to package.json if desired
 - **Color transparency**: Use hex with alpha suffix (e.g., "#E4007C30" for 30% opacity)
 - **Scope specificity**: More specific scopes override general ones (TextMate rule)
 - **Font styles**: Options are "italic", "bold", "italic bold", "underline"
 - **Generated files**: The JSON in `themes/` is generated - do not edit directly
+
+## Publishing
+
+**See [docs/PUBLISHING.md](docs/PUBLISHING.md) for complete publishing instructions** including:
+- Pushing to GitHub
+- Creating VS Code Marketplace publisher account
+- Generating Personal Access Token
+- Publishing with vsce
