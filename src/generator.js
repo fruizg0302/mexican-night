@@ -465,226 +465,476 @@ function generateTheme() {
     }
   ];
 
-  // Enhanced JavaScript/TypeScript syntax highlighting
+  // Enhanced JavaScript/TypeScript syntax highlighting - Mexican Night
   const javascriptScopes = [
-    // JS/TS comments
+    // ==========================================
+    // COMMENTS
+    // ==========================================
     {
-      name: "JavaScript Comments",
+      name: "JS/TS Comments",
       scope: [
-        "comment.block.js",
         "comment.line.double-slash.js",
-        "comment.block.documentation.js"
+        "comment.line.double-slash.ts",
+        "comment.block.js",
+        "comment.block.ts"
       ],
       settings: {
-        foreground: syntaxColors.comment,
+        foreground: palette.tierraBrown,
         fontStyle: "italic"
       }
     },
-    
-    // JS/TS keywords
     {
-      name: "JavaScript Keywords",
+      name: "JSDoc Comments",
+      scope: [
+        "comment.block.documentation.js",
+        "comment.block.documentation.ts"
+      ],
+      settings: {
+        foreground: palette.tierraBrown,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "JSDoc Tags",
+      scope: [
+        "storage.type.class.jsdoc",
+        "punctuation.definition.block.tag.jsdoc"
+      ],
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+    {
+      name: "JSDoc Types",
+      scope: [
+        "entity.name.type.instance.jsdoc"
+      ],
+      settings: {
+        foreground: palette.neonBlue,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // KEYWORDS AND CONTROL FLOW
+    // ==========================================
+    {
+      name: "JS/TS Keywords",
       scope: [
         "keyword.control.js",
-        "keyword.control.flow.js",
-        "keyword.control.conditional.js",
-        "keyword.control.loop.js",
+        "keyword.control.ts",
         "storage.type.js",
-        "storage.type.function.js",
-        "storage.type.class.js"
+        "storage.type.ts",
+        "keyword.operator.new.js",
+        "keyword.operator.new.ts"
       ],
       settings: {
-        foreground: syntaxColors.keyword
+        foreground: palette.rosaMexicano
       }
     },
-    
-    // JS/TS functions
     {
-      name: "JavaScript Function Names",
+      name: "JS/TS Control Flow (italic)",
       scope: [
-        "entity.name.function.js",
-        "meta.function-call.js",
-        "support.function.js"
+        "keyword.control.flow.js",
+        "keyword.control.flow.ts",
+        "keyword.control.return.js",
+        "keyword.control.return.ts",
+        "keyword.control.trycatch.js",
+        "keyword.control.trycatch.ts",
+        "storage.modifier.async.js",
+        "storage.modifier.async.ts"
       ],
       settings: {
-        foreground: syntaxColors.function
-      }
-    },
-    
-    // JS/TS arrow functions
-    {
-      name: "JavaScript Arrow Functions",
-      scope: "storage.type.function.arrow.js",
-      settings: {
-        foreground: syntaxColors.jsArrowFunction
-      }
-    },
-    
-    // JS/TS variables and parameters
-    {
-      name: "JavaScript Parameters",
-      scope: [
-        "variable.parameter.js",
-        "meta.parameter.js"
-      ],
-      settings: {
-        foreground: syntaxColors.parameter,
+        foreground: palette.rosaMexicano,
         fontStyle: "italic"
       }
     },
-    
-    // JS/TS this and super
     {
-      name: "JavaScript This/Super",
-      scope: [
-        "variable.language.this.js",
-        "variable.language.super.js"
-      ],
-      settings: {
-        foreground: syntaxColors.jsThis,
-        fontStyle: "italic"
-      }
-    },
-    
-    // JS/TS constants
-    {
-      name: "JavaScript Constants",
-      scope: [
-        "constant.language.js",
-        "constant.language.null.js",
-        "constant.language.undefined.js",
-        "constant.language.nan.js",
-        "constant.language.infinity.js"
-      ],
-      settings: {
-        foreground: syntaxColors.constant
-      }
-    },
-    
-    // JS/TS template literals
-    {
-      name: "JavaScript Template Literals",
-      scope: [
-        "string.template.js",
-        "meta.template.expression.js"
-      ],
-      settings: {
-        foreground: syntaxColors.jsTemplateLiteral
-      }
-    },
-    
-    // JS/TS template expressions
-    {
-      name: "JavaScript Template Expressions",
-      scope: [
-        "punctuation.definition.template-expression.begin.js",
-        "punctuation.definition.template-expression.end.js",
-        "meta.embedded.line.js"
-      ],
-      settings: {
-        foreground: syntaxColors.jsTemplateExpression
-      }
-    },
-    
-    // JS/TS classes
-    {
-      name: "JavaScript Classes",
-      scope: [
-        "entity.name.type.class.js",
-        "entity.name.type.js",
-        "support.class.js"
-      ],
-      settings: {
-        foreground: syntaxColors.class
-      }
-    },
-    
-    // JS/TS imports/exports
-    {
-      name: "JavaScript Import/Export",
+      name: "JS/TS Import/Export",
       scope: [
         "keyword.control.import.js",
+        "keyword.control.import.ts",
         "keyword.control.export.js",
+        "keyword.control.export.ts",
         "keyword.control.from.js",
-        "keyword.control.as.js"
+        "keyword.control.from.ts",
+        "keyword.control.as.js",
+        "keyword.control.as.ts"
       ],
       settings: {
-        foreground: syntaxColors.jsImport
+        foreground: palette.neonPurple
       }
     },
-    
-    // JS/TS async/await
+
+    // ==========================================
+    // FUNCTIONS AND METHODS
+    // ==========================================
     {
-      name: "JavaScript Async/Await",
+      name: "JS/TS Function Definitions",
       scope: [
-        "keyword.control.flow.js",
-        "storage.modifier.async.js",
-        "keyword.control.await.js"
+        "entity.name.function.js",
+        "entity.name.function.ts",
+        "entity.name.method.js",
+        "entity.name.method.ts"
       ],
       settings: {
-        foreground: syntaxColors.jsAsync
+        foreground: palette.neonBlue
       }
     },
-    
-    // JS/TS decorators
     {
-      name: "JavaScript Decorators",
+      name: "JS/TS Built-in Functions",
       scope: [
-        "meta.decorator.js",
-        "punctuation.decorator.js"
+        "support.function.js",
+        "support.function.ts",
+        "support.function.dom.js",
+        "support.function.dom.ts"
       ],
       settings: {
-        foreground: syntaxColors.jsDecorator
+        foreground: palette.neonBlue
       }
     },
-    
-    // JS/TS object properties
     {
-      name: "JavaScript Object Properties",
+      name: "JS/TS Console",
       scope: [
+        "support.function.console.js",
+        "support.function.console.ts",
+        "support.class.console.js",
+        "support.class.console.ts"
+      ],
+      settings: {
+        foreground: palette.neonYellow,
+        fontStyle: "bold"
+      }
+    },
+
+    // ==========================================
+    // CLASSES AND TYPES
+    // ==========================================
+    {
+      name: "JS/TS Class Names",
+      scope: [
+        "entity.name.type.class.js",
+        "entity.name.type.class.ts",
+        "support.class.js",
+        "support.class.ts"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+    {
+      name: "TypeScript Interface Names",
+      scope: [
+        "entity.name.type.interface.ts",
+        "entity.name.type.interface.tsx"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+    {
+      name: "TypeScript Type Names",
+      scope: [
+        "entity.name.type.ts",
+        "entity.name.type.tsx",
+        "entity.name.type.alias.ts",
+        "entity.name.type.alias.tsx"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+
+    // ==========================================
+    // STRINGS AND TEMPLATES
+    // ==========================================
+    {
+      name: "JS/TS Strings",
+      scope: [
+        "string.quoted.single.js",
+        "string.quoted.single.ts",
+        "string.quoted.double.js",
+        "string.quoted.double.ts"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "JS/TS Template Literals",
+      scope: [
+        "string.template.js",
+        "string.template.ts"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "JS/TS Template Interpolation Delimiters",
+      scope: [
+        "punctuation.definition.template-expression.begin.js",
+        "punctuation.definition.template-expression.begin.ts",
+        "punctuation.definition.template-expression.end.js",
+        "punctuation.definition.template-expression.end.ts"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "JS/TS Embedded Code in Templates",
+      scope: [
+        "meta.template.expression.js",
+        "meta.template.expression.ts"
+      ],
+      settings: {
+        foreground: palette.textPrimary
+      }
+    },
+
+    // ==========================================
+    // VARIABLES AND CONSTANTS
+    // ==========================================
+    {
+      name: "JS/TS Variables",
+      scope: [
+        "variable.other.readwrite.js",
+        "variable.other.readwrite.ts",
+        "variable.other.object.js",
+        "variable.other.object.ts"
+      ],
+      settings: {
+        foreground: palette.neonYellow
+      }
+    },
+    {
+      name: "JS/TS Constants",
+      scope: [
+        "variable.other.constant.js",
+        "variable.other.constant.ts",
+        "constant.numeric.js",
+        "constant.numeric.ts",
+        "constant.numeric.decimal.js",
+        "constant.numeric.decimal.ts",
+        "constant.numeric.hex.js",
+        "constant.numeric.hex.ts"
+      ],
+      settings: {
+        foreground: palette.amber
+      }
+    },
+
+    // ==========================================
+    // PARAMETERS
+    // ==========================================
+    {
+      name: "JS/TS Function Parameters (italic)",
+      scope: [
+        "variable.parameter.js",
+        "variable.parameter.ts"
+      ],
+      settings: {
+        foreground: palette.neonYellow,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // SPECIAL LANGUAGE VARIABLES
+    // ==========================================
+    {
+      name: "JS/TS this/super/arguments (italic)",
+      scope: [
+        "variable.language.this.js",
+        "variable.language.this.ts",
+        "variable.language.super.js",
+        "variable.language.super.ts",
+        "variable.language.arguments.js",
+        "variable.language.arguments.ts"
+      ],
+      settings: {
+        foreground: palette.redEmphasis,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // BOOLEANS, NULL, UNDEFINED
+    // ==========================================
+    {
+      name: "JS/TS Booleans & null/undefined",
+      scope: [
+        "constant.language.boolean.true.js",
+        "constant.language.boolean.true.ts",
+        "constant.language.boolean.false.js",
+        "constant.language.boolean.false.ts",
+        "constant.language.null.js",
+        "constant.language.null.ts",
+        "constant.language.undefined.js",
+        "constant.language.undefined.ts",
+        "constant.language.nan.js",
+        "constant.language.nan.ts",
+        "constant.language.infinity.js",
+        "constant.language.infinity.ts"
+      ],
+      settings: {
+        foreground: palette.amber
+      }
+    },
+
+    // ==========================================
+    // OBJECT PROPERTIES
+    // ==========================================
+    {
+      name: "JS/TS Object Properties",
+      scope: [
+        "variable.other.property.js",
+        "variable.other.property.ts",
         "meta.object-literal.key.js",
-        "variable.other.property.js"
+        "meta.object-literal.key.ts"
       ],
       settings: {
-        foreground: syntaxColors.variableProperty
+        foreground: palette.neonYellow
       }
     },
-    
-    // JS/TS operators
+
+    // ==========================================
+    // OPERATORS
+    // ==========================================
     {
-      name: "JavaScript Operators",
+      name: "JS/TS Operators",
       scope: [
-        "keyword.operator.js",
-        "keyword.operator.assignment.js",
-        "keyword.operator.comparison.js",
         "keyword.operator.arithmetic.js",
+        "keyword.operator.arithmetic.ts",
+        "keyword.operator.comparison.js",
+        "keyword.operator.comparison.ts",
         "keyword.operator.logical.js",
-        "keyword.operator.ternary.js"
+        "keyword.operator.logical.ts",
+        "keyword.operator.assignment.js",
+        "keyword.operator.assignment.ts",
+        "keyword.operator.assignment.compound.js",
+        "keyword.operator.assignment.compound.ts",
+        "keyword.operator.bitwise.js",
+        "keyword.operator.bitwise.ts",
+        "keyword.operator.ternary.js",
+        "keyword.operator.ternary.ts",
+        "keyword.operator.spread.js",
+        "keyword.operator.spread.ts"
       ],
       settings: {
-        foreground: syntaxColors.operator
+        foreground: palette.neonBlue
       }
     },
-    
-    // JSX/TSX
+
+    // ==========================================
+    // TYPESCRIPT TYPE ANNOTATIONS
+    // ==========================================
     {
-      name: "JSX Component Tags",
+      name: "TypeScript Type Annotations",
+      scope: [
+        "meta.type.annotation.ts",
+        "meta.type.annotation.tsx",
+        "support.type.primitive.ts",
+        "support.type.primitive.tsx",
+        "keyword.operator.type.annotation.ts",
+        "keyword.operator.type.annotation.tsx"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "TypeScript Optional Chaining & Nullish Coalescing",
+      scope: [
+        "keyword.operator.optional.ts",
+        "keyword.operator.optional.tsx",
+        "keyword.operator.nullish-coalescing.ts",
+        "keyword.operator.nullish-coalescing.tsx"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+
+    // ==========================================
+    // REGULAR EXPRESSIONS
+    // ==========================================
+    {
+      name: "JS/TS Regular Expressions",
+      scope: [
+        "string.regexp.js",
+        "string.regexp.ts"
+      ],
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+
+    // ==========================================
+    // JSX/TSX
+    // ==========================================
+    {
+      name: "JSX/TSX Tags",
       scope: [
         "entity.name.tag.js",
-        "support.class.component.js"
+        "entity.name.tag.jsx",
+        "entity.name.tag.tsx",
+        "support.class.component.js",
+        "support.class.component.tsx"
       ],
       settings: {
-        foreground: syntaxColors.jsxComponent
+        foreground: palette.deeperOrange
       }
     },
     {
-      name: "JSX Attributes",
+      name: "JSX/TSX Attributes",
       scope: [
         "entity.other.attribute-name.js",
-        "meta.tag.attributes.js"
+        "entity.other.attribute-name.jsx",
+        "entity.other.attribute-name.tsx"
       ],
       settings: {
-        foreground: syntaxColors.jsxAttribute
+        foreground: palette.neonYellow,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // DECORATORS
+    // ==========================================
+    {
+      name: "JS/TS Decorators",
+      scope: [
+        "meta.decorator.js",
+        "meta.decorator.ts",
+        "entity.name.function.decorator.js",
+        "entity.name.function.decorator.ts",
+        "punctuation.decorator.js",
+        "punctuation.decorator.ts"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+
+    // ==========================================
+    // PUNCTUATION
+    // ==========================================
+    {
+      name: "JS/TS Punctuation",
+      scope: [
+        "punctuation.separator.comma.js",
+        "punctuation.separator.comma.ts",
+        "punctuation.terminator.statement.js",
+        "punctuation.terminator.statement.ts",
+        "punctuation.accessor.js",
+        "punctuation.accessor.ts",
+        "punctuation.accessor.optional.js",
+        "punctuation.accessor.optional.ts"
+      ],
+      settings: {
+        foreground: palette.textSecondary
       }
     }
   ];

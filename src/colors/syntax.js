@@ -5,160 +5,230 @@ import { palette } from './palette.js';
 
 function getSemanticTokenColors(palette) {
   return {
+    // Parameters
     "parameter.declaration": {
-      foreground: palette.neonOrange,
+      foreground: palette.neonYellow,       // Marigold yellow
+      fontStyle: "italic",
     },
     parameter: {
-      foreground: palette.textPrimary,
+      foreground: palette.neonYellow,
+      fontStyle: "italic",
     },
+
+    // Properties
     "property.declaration": {
-      foreground: palette.verdeMexicanoLight,
+      foreground: palette.neonYellow,       // Yellow for properties
     },
     "property.defaultLibrary": {
-      foreground: palette.accentCyan,
+      foreground: palette.neonBlue,         // Turquoise for library properties
     },
+    property: {
+      foreground: palette.neonYellow,
+    },
+
+    // Default library elements
     "*.defaultLibrary": {
-      foreground: palette.accentCyan,
+      foreground: palette.neonBlue,         // Turquoise for built-ins
     },
-    variable: {
-      foreground: palette.textPrimary,
-    },
-    "variable.readonly": {
-      foreground: palette.textPrimary,
-    },
-    "variable.declaration": {
-      foreground: palette.textPrimary,
-    },
-    "function.declaration": {
+    "function.defaultLibrary": {
       foreground: palette.neonBlue,
     },
-    type: {
-      foreground: palette.accentCyan,
+
+    // Variables
+    variable: {
+      foreground: palette.neonYellow,       // Marigold yellow
     },
-    class: {
+    "variable.readonly": {
+      foreground: palette.amber,            // Amber for constants
+    },
+    "variable.declaration": {
       foreground: palette.neonYellow,
+    },
+
+    // Functions and Methods
+    "function.declaration": {
+      foreground: palette.neonBlue,         // Turquoise
+    },
+    function: {
+      foreground: palette.neonBlue,
+    },
+    method: {
+      foreground: palette.neonBlue,
+    },
+    "method.declaration": {
+      foreground: palette.neonBlue,
+    },
+
+    // Types (TypeScript)
+    type: {
+      foreground: palette.neonBlue,         // Turquoise for types
+    },
+    "type.declaration": {
+      foreground: palette.neonOrange,       // Orange for type declarations
+    },
+
+    // Classes and Interfaces
+    class: {
+      foreground: palette.neonOrange,       // Cempasúchil orange
+    },
+    "class.declaration": {
+      foreground: palette.neonOrange,
     },
     interface: {
-      foreground: palette.neonYellow,
+      foreground: palette.neonOrange,       // Orange for interfaces
+    },
+    "interface.declaration": {
+      foreground: palette.neonOrange,
+    },
+    enum: {
+      foreground: palette.neonOrange,
+    },
+    "enum.declaration": {
+      foreground: palette.neonOrange,
+    },
+
+    // Namespaces and Modules
+    namespace: {
+      foreground: palette.neonOrange,
+    },
+
+    // Type Parameters (Generics)
+    typeParameter: {
+      foreground: palette.neonOrange,
+    },
+
+    // Special modifiers
+    "*.static": {
+      fontStyle: "italic",
+    },
+    "*.async": {
+      fontStyle: "italic",
+    },
+    "*.readonly": {
+      foreground: palette.amber,
+    },
+    "*.deprecated": {
+      fontStyle: "strikethrough",
+      foreground: palette.gray500,
     },
   };
 }
 
 export const syntaxColors = {
-  // Let's enhance Ruby and JavaScript syntax highlighting
+  // Mexican Night color mappings for syntax highlighting
 
   // Comments
-  comment: palette.gray400,
-  commentDoc: palette.gray500,
+  comment: palette.tierraBrown,           // Tierra brown - earthy, subtle
+  commentDoc: palette.tierraBrown,
 
   // Keywords & Control Flow
-  keyword: palette.purple,
-  keywordControl: palette.magenta,
-  keywordOperator: palette.cyan,
+  keyword: palette.rosaMexicano,          // Rosa mexicana - vibrant
+  keywordControl: palette.rosaMexicano,
+  keywordOperator: palette.neonBlue,      // Turquoise
 
   // Functions & Methods
-  function: palette.blue,
-  functionCall: palette.blue,
-  method: palette.blue,
-  methodCall: palette.blue,
+  function: palette.neonBlue,             // Turquoise - Mexican jewelry
+  functionCall: palette.neonBlue,
+  method: palette.neonBlue,
+  methodCall: palette.neonBlue,
 
   // Variables & Parameters
-  variable: palette.white,
-  variableProperty: palette.white,
-  parameter: palette.orange,
+  variable: palette.neonYellow,           // Marigold yellow
+  variableProperty: palette.neonYellow,
+  parameter: palette.neonYellow,
 
   // Constants & Literals
-  constant: palette.orange,
-  constantBuiltin: palette.orange,
-  constantLanguage: palette.orange,
+  constant: palette.amber,                // Amber - constants/numbers
+  constantBuiltin: palette.amber,
+  constantLanguage: palette.amber,
 
   // Strings & Regular Expressions
-  string: palette.green,
-  stringRegexp: palette.cyan,
-  stringEscape: palette.magenta,
-  stringInterpolation: palette.cyan,
+  string: palette.verdeMexicanoLight,     // Verde bandera
+  stringRegexp: palette.neonPurple,       // Bougainvillea purple
+  stringEscape: palette.rosaMexicano,
+  stringInterpolation: palette.rosaMexicano,
 
   // Numbers & Booleans
-  number: palette.orange,
-  boolean: palette.orange,
+  number: palette.amber,
+  boolean: palette.amber,
 
   // Types & Classes
-  type: palette.cyan,
-  typeBuiltin: palette.cyan,
-  class: palette.yellow,
-  className: palette.yellow,
+  type: palette.neonBlue,                 // Turquoise
+  typeBuiltin: palette.neonBlue,
+  class: palette.neonOrange,              // Cempasúchil orange
+  className: palette.neonOrange,
 
   // Support & Library
-  support: palette.cyan,
-  supportFunction: palette.cyan,
-  supportMethod: palette.cyan,
-  supportClass: palette.yellow,
-  supportType: palette.cyan,
-  supportConstant: palette.orange,
-  supportVariable: palette.white,
+  support: palette.neonBlue,              // Turquoise
+  supportFunction: palette.neonBlue,
+  supportMethod: palette.neonBlue,
+  supportClass: palette.neonOrange,
+  supportType: palette.neonBlue,
+  supportConstant: palette.amber,
+  supportVariable: palette.neonYellow,
 
   // Punctuation & Operators
   punctuation: palette.gray600,
   punctuationDefinition: palette.gray600,
-  punctuationSection: palette.white,
+  punctuationSection: palette.textPrimary,
   punctuationTerminator: palette.gray600,
-  operator: palette.cyan,
+  operator: palette.neonBlue,             // Turquoise
 
   // Tags (HTML/JSX)
-  tag: palette.red,
-  tagAttribute: palette.purple,
+  tag: palette.deeperOrange,              // Deeper orange for JSX
+  tagAttribute: palette.neonYellow,
   tagPunctuation: palette.gray600,
 
   // Invalid & Deprecated
-  invalid: palette.red,
+  invalid: palette.error,
   invalidDeprecated: palette.gray500,
 
-  // Ruby-specific
-  rubySymbol: palette.cyan,
-  rubyInstanceVariable: palette.magenta,
-  rubyClassVariable: palette.magenta,
-  rubyGlobalVariable: palette.red,
-  rubyPseudoVariable: palette.magenta,
-  rubyHeredoc: palette.green,
-  rubyInterpolation: palette.cyan,
-  rubyRegexp: palette.cyan,
+  // Ruby-specific (already updated in rubyScopes)
+  rubySymbol: palette.neonBlue,
+  rubyInstanceVariable: palette.neonYellow,
+  rubyClassVariable: palette.deeperOrange,
+  rubyGlobalVariable: palette.redWarning,
+  rubyPseudoVariable: palette.redEmphasis,
+  rubyHeredoc: palette.verdeMexicanoLight,
+  rubyInterpolation: palette.rosaMexicano,
+  rubyRegexp: palette.accentTeal,
 
-  // JavaScript-specific
-  jsThis: palette.magenta,
-  jsSuper: palette.magenta,
-  jsNull: palette.orange,
-  jsUndefined: palette.orange,
-  jsNan: palette.orange,
-  jsPrototype: palette.cyan,
-  jsConstructor: palette.blue,
-  jsDecorator: palette.blue,
-  jsxComponent: palette.yellow,
-  jsxAttribute: palette.purple,
-  jsArrowFunction: palette.blue,
-  jsTemplateLiteral: palette.green,
-  jsTemplateExpression: palette.cyan,
-  jsImport: palette.purple,
-  jsExport: palette.purple,
-  jsAsync: palette.purple,
-  jsAwait: palette.purple,
+  // JavaScript-specific (Mexican Night mapping)
+  jsThis: palette.redEmphasis,            // Red emphasis
+  jsSuper: palette.redEmphasis,
+  jsNull: palette.amber,
+  jsUndefined: palette.amber,
+  jsNan: palette.amber,
+  jsPrototype: palette.neonBlue,
+  jsConstructor: palette.neonBlue,
+  jsDecorator: palette.rosaMexicano,      // Rosa mexicana
+  jsxComponent: palette.deeperOrange,     // Deeper orange
+  jsxAttribute: palette.neonYellow,       // Marigold yellow
+  jsArrowFunction: palette.rosaMexicano,
+  jsTemplateLiteral: palette.verdeMexicanoLight,
+  jsTemplateExpression: palette.rosaMexicano,
+  jsImport: palette.neonPurple,           // Bougainvillea purple
+  jsExport: palette.neonPurple,
+  jsAsync: palette.neonPurple,
+  jsAwait: palette.neonPurple,
 
   // Storage modifiers
-  storageType: palette.purple,
-  storageModifier: palette.purple,
+  storageType: palette.rosaMexicano,
+  storageModifier: palette.rosaMexicano,
 
   // Entity names
-  entityName: palette.yellow,
-  entityNameFunction: palette.blue,
-  entityNameType: palette.yellow,
-  entityNameTag: palette.red,
-  entityNameSection: palette.blue,
-  entityOther: palette.orange,
+  entityName: palette.neonOrange,
+  entityNameFunction: palette.neonBlue,
+  entityNameType: palette.neonOrange,
+  entityNameTag: palette.deeperOrange,
+  entityNameSection: palette.neonBlue,
+  entityOther: palette.neonYellow,
 
   // Meta
-  metaClass: palette.yellow,
-  metaFunction: palette.blue,
-  metaSelector: palette.purple,
-  metaProperty: palette.cyan,
+  metaClass: palette.neonOrange,
+  metaFunction: palette.neonBlue,
+  metaSelector: palette.neonPurple,
+  metaProperty: palette.neonBlue,
 };
 
 function getTokenColors(palette) {
