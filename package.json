@@ -1,0 +1,39 @@
+{
+  "name": "mexican-night",
+  "displayName": "mexican-night",
+  "description": "A clean Visual Studio Code theme that celebrates the lights of  Mexico City at night",
+  "version": "0.0.1",
+  "publisher": "wowzontle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fruizg0302/mexican-night"
+  },
+  "keywords": [
+    "theme",
+    "dark theme",
+    "mexican",
+    "night",
+    "mexico city"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "scripts": {
+    "build": "node src/generator.js",
+    "watch": "nodemon --watch src --exec 'npm run build'",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Mexican Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Mexican Night-color-theme.json"
+      }
+    ]
+  }
+}
