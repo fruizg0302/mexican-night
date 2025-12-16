@@ -17,13 +17,13 @@ function getSemanticTokenColors(palette) {
 
     // Properties
     "property.declaration": {
-      foreground: palette.neonYellow,       // Yellow for properties
+      foreground: palette.neonOrange,       // Orange for properties (easier on eyes)
     },
     "property.defaultLibrary": {
       foreground: palette.neonBlue,         // Turquoise for library properties
     },
     property: {
-      foreground: palette.neonYellow,
+      foreground: palette.neonOrange,       // Orange for properties
     },
 
     // Default library elements
@@ -36,13 +36,13 @@ function getSemanticTokenColors(palette) {
 
     // Variables
     variable: {
-      foreground: palette.neonYellow,       // Marigold yellow
+      foreground: palette.textPrimary,      // Default text for local variables
     },
     "variable.readonly": {
       foreground: palette.amber,            // Amber for constants
     },
     "variable.declaration": {
-      foreground: palette.neonYellow,
+      foreground: palette.textPrimary,      // Default text
     },
 
     // Functions and Methods
@@ -133,8 +133,8 @@ export const syntaxColors = {
   methodCall: palette.neonBlue,
 
   // Variables & Parameters
-  variable: palette.neonYellow,           // Marigold yellow
-  variableProperty: palette.neonYellow,
+  variable: palette.textPrimary,          // Use default text for local variables
+  variableProperty: palette.neonOrange,   // Orange for properties (easier on eyes)
   parameter: palette.neonYellow,
 
   // Constants & Literals
@@ -165,7 +165,7 @@ export const syntaxColors = {
   supportClass: palette.neonOrange,
   supportType: palette.neonBlue,
   supportConstant: palette.amber,
-  supportVariable: palette.neonYellow,
+  supportVariable: palette.neonOrange,    // Orange for built-in objects (document, window)
 
   // Punctuation & Operators
   punctuation: palette.gray600,
@@ -222,7 +222,7 @@ export const syntaxColors = {
   entityNameType: palette.neonOrange,
   entityNameTag: palette.deeperOrange,
   entityNameSection: palette.neonBlue,
-  entityOther: palette.neonYellow,
+  entityOther: palette.neonOrange,        // Orange for other entities
 
   // Meta
   metaClass: palette.neonOrange,

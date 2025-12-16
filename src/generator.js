@@ -705,7 +705,7 @@ function generateTheme() {
         "variable.other.object.ts"
       ],
       settings: {
-        foreground: palette.neonYellow
+        foreground: palette.textPrimary  // Default text color for local variables
       }
     },
     {
@@ -795,7 +795,25 @@ function generateTheme() {
         "meta.object-literal.key.ts"
       ],
       settings: {
-        foreground: palette.neonYellow
+        foreground: palette.neonOrange  // Orange is easier on the eyes
+      }
+    },
+
+    // ==========================================
+    // BUILT-IN OBJECTS
+    // ==========================================
+    {
+      name: "JS/TS Built-in Objects (document, window, etc)",
+      scope: [
+        "support.variable.js",
+        "support.variable.ts",
+        "support.variable.dom.js",
+        "support.variable.dom.ts",
+        "support.variable.property.js",
+        "support.variable.property.ts"
+      ],
+      settings: {
+        foreground: palette.neonOrange  // Orange for built-in objects
       }
     },
 
@@ -934,7 +952,25 @@ function generateTheme() {
         "punctuation.accessor.optional.ts"
       ],
       settings: {
-        foreground: palette.textSecondary
+        foreground: palette.textSecondary  // Subtle gray
+      }
+    },
+    {
+      name: "JS/TS Brackets and Parentheses",
+      scope: [
+        "meta.brace.round.js",
+        "meta.brace.round.ts",
+        "meta.brace.square.js",
+        "meta.brace.square.ts",
+        "punctuation.definition.block.js",
+        "punctuation.definition.block.ts",
+        "punctuation.definition.parameters.begin.js",
+        "punctuation.definition.parameters.begin.ts",
+        "punctuation.definition.parameters.end.js",
+        "punctuation.definition.parameters.end.ts"
+      ],
+      settings: {
+        foreground: palette.textSecondary  // Subtle gray for brackets/parens
       }
     }
   ];
