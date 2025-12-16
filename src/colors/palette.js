@@ -25,18 +25,30 @@ export const palette = {
   // ==========================================
   // MEXICAN BRAND COLORS (Primary Accents)
   // ==========================================
-  rosaMexicano: "#E4007C",       // Mexican pink (primary accent)
+  rosaMexicano: "#ff006e",       // Mexican pink (primary accent) - Updated
   rosaMexicanoLight: "#FF69B4",  // Hot pink (high visibility)
   verdeMexicano: "#006341",      // Mexican green (flag color)
-  verdeMexicanoLight: "#50fa7b", // Bright green (strings, success)
+  verdeMexicanoLight: "#00d084", // Bright green (strings, success) - Updated
 
   // ==========================================
   // NEON ACCENT COLORS (Mexico City Lights)
   // ==========================================
-  neonYellow: "#FFD700",         // Gold (Day of Dead marigold)
-  neonOrange: "#FF9E64",         // Marigold orange
+  neonYellow: "#ffd60a",         // Marigold yellow (instance variables) - Updated
+  neonOrange: "#ff9500",         // Cempasúchil orange (classes/modules) - Updated
   neonPurple: "#BB9AF7",         // Mexican baroque purple
-  neonBlue: "#40E0D0",           // Turquoise (Mexican jewelry)
+  neonBlue: "#06ffc8",           // Turquoise (methods, symbols) - Updated
+  deeperOrange: "#fb8500",       // Deeper orange (class variables) - New
+  amber: "#ffba08",              // Amber (constants, numbers) - New
+  gold: "#fbbf24",               // Distinct gold - New
+
+  // ==========================================
+  // EARTHY & ACCENT TONES
+  // ==========================================
+  tierraBrown: "#8b7355",        // Tierra/clay (comments) - New
+  clayBrown: "#8b4513",          // Clay brown (muted elements) - New
+  darkNavy: "#1e3a8a",           // Dark navy (background accents) - New
+  redWarning: "#dc2f02",         // Red warning (global variables) - New
+  redEmphasis: "#d00000",        // Red emphasis (self/super) - New
 
   // ==========================================
   // NIGHT SKY BACKGROUNDS
@@ -59,15 +71,15 @@ export const palette = {
   // ==========================================
   accentCyan: "#FF69B4",         // Mexican pink (replaces cyan)
   accentMagenta: "#ff79c6",      // Magenta accent
-  accentTeal: "#40E0D0",         // Turquoise (teal replacement)
+  accentTeal: "#06ffc8",         // Turquoise (updated)
 
   // ==========================================
   // SEMANTIC UI COLORS
   // ==========================================
   error: "#f7768e",
   warning: "#e0af68",
-  info: "#40E0D0",               // Turquoise (replaces blue)
-  success: "#50fa7b",            // Bright green
+  info: "#06ffc8",               // Turquoise (updated)
+  success: "#00d084",            // Bright green (updated)
 
   // ==========================================
   // VIBRANT COLORS - UPDATED FOR MEXICAN THEME
@@ -86,7 +98,7 @@ export const palette = {
   cyanBright: "#FF9EFF",         // Bright pink (was #8be9fd)
 
   // UPDATED: Blue now maps to turquoise
-  blue: "#40E0D0",               // Turquoise (was #7aa2f7)
+  blue: "#06ffc8",               // Turquoise (updated)
   blueBright: "#7FFFD4",         // Aquamarine (was #82aaff)
 
   purple: "#bb9af7",
@@ -97,12 +109,12 @@ export const palette = {
   // ==========================================
   // LEGACY COLORS (For Compatibility)
   // ==========================================
-  accent: "#E4007C",             // Changed to rosaMexicano
+  accent: "#ff006e",             // Changed to rosaMexicano (updated)
   bg: "#1E1E2E",                 // Changed to nightSkyLight
   bgDark: "#16161E",             // Changed to nightSky
   bgHighlight: "#2D2D3D",        // Changed to nightSkyMedium
   bgSelection: "#3B3B52",        // Changed to nightSkyBright
-  bgSearch: "#E4007C40",         // Rosa mexicano with transparency
+  bgSearch: "#ff006e40",         // Rosa mexicano with transparency (updated)
   border: "#2D2D3D",             // Changed to nightSkyMedium
   borderHighlight: "#565f89",    // Keep gray400
 
@@ -111,17 +123,17 @@ export const palette = {
   // ==========================================
   terminalBlack: "#16161E",      // nightSky
   terminalRed: "#f7768e",
-  terminalGreen: "#50fa7b",      // verdeMexicanoLight
-  terminalYellow: "#FFD700",     // neonYellow
-  terminalBlue: "#40E0D0",       // Turquoise (was blue)
-  terminalMagenta: "#E4007C",    // rosaMexicano
+  terminalGreen: "#00d084",      // verdeMexicanoLight (updated)
+  terminalYellow: "#ffd60a",     // neonYellow (updated)
+  terminalBlue: "#06ffc8",       // Turquoise (updated)
+  terminalMagenta: "#ff006e",    // rosaMexicano (updated)
   terminalCyan: "#FF69B4",       // Mexican pink (was cyan)
   terminalWhite: "#c0caf5",
   terminalBrightBlack: "#565f89",
   terminalBrightRed: "#ff5370",
-  terminalBrightGreen: "#50fa7b",
-  terminalBrightYellow: "#FFD700",
-  terminalBrightBlue: "#7FFFD4", // Aquamarine
+  terminalBrightGreen: "#00d084",
+  terminalBrightYellow: "#ffd60a",
+  terminalBrightBlue: "#06ffc8", // Turquoise (updated)
   terminalBrightMagenta: "#FF69B4",
   terminalBrightCyan: "#FF9EFF",
   terminalBrightWhite: "#c0caf5",

@@ -29,7 +29,7 @@ function generateTheme() {
         "comment.block.documentation.ruby"
       ],
       settings: {
-        foreground: palette.textMuted,
+        foreground: palette.tierraBrown,
         fontStyle: "italic"
       }
     },
@@ -97,21 +97,21 @@ function generateTheme() {
       name: "Ruby Class Names",
       scope: "entity.name.type.class.ruby",
       settings: {
-        foreground: palette.neonYellow
+        foreground: palette.neonOrange
       }
     },
     {
       name: "Ruby Module Names",
       scope: "entity.name.type.module.ruby",
       settings: {
-        foreground: palette.neonYellow
+        foreground: palette.neonOrange
       }
     },
     {
       name: "Ruby Inherited Class - Italic",
       scope: "entity.other.inherited-class.ruby",
       settings: {
-        foreground: palette.neonYellow,
+        foreground: palette.neonOrange,
         fontStyle: "italic"
       }
     },
@@ -119,7 +119,7 @@ function generateTheme() {
       name: "Ruby Support Classes",
       scope: "support.class.ruby",
       settings: {
-        foreground: palette.neonYellow
+        foreground: palette.neonOrange
       }
     },
     {
@@ -144,14 +144,14 @@ function generateTheme() {
       name: "Ruby Instance Variables (@var)",
       scope: "variable.other.readwrite.instance.ruby",
       settings: {
-        foreground: palette.neonOrange
+        foreground: palette.neonYellow
       }
     },
     {
       name: "Ruby Class Variables (@@var)",
       scope: "variable.other.readwrite.class.ruby",
       settings: {
-        foreground: palette.magenta
+        foreground: palette.deeperOrange
       }
     },
     {
@@ -161,7 +161,7 @@ function generateTheme() {
         "variable.other.readwrite.global.pre-defined.ruby"
       ],
       settings: {
-        foreground: palette.rosaMexicanoLight
+        foreground: palette.redWarning
       }
     },
     {
@@ -171,7 +171,7 @@ function generateTheme() {
         "variable.language.super.ruby"
       ],
       settings: {
-        foreground: palette.rosaMexicanoLight,
+        foreground: palette.redEmphasis,
         fontStyle: "italic"
       }
     },
@@ -179,7 +179,7 @@ function generateTheme() {
       name: "Ruby __FILE__ and __LINE__",
       scope: "variable.language.ruby",
       settings: {
-        foreground: palette.neonOrange
+        foreground: palette.neonYellow
       }
     },
     {
@@ -197,7 +197,7 @@ function generateTheme() {
       name: "Ruby Method Parameters - Italic",
       scope: "variable.parameter.function.ruby",
       settings: {
-        foreground: palette.neonOrange,
+        foreground: palette.neonYellow,
         fontStyle: "italic"
       }
     },
@@ -205,7 +205,7 @@ function generateTheme() {
       name: "Ruby Block Parameters - Italic",
       scope: "variable.other.block.ruby",
       settings: {
-        foreground: palette.neonOrange,
+        foreground: palette.neonYellow,
         fontStyle: "italic"
       }
     },
@@ -224,7 +224,7 @@ function generateTheme() {
       name: "Ruby Constants (CONSTANT)",
       scope: "variable.other.constant.ruby",
       settings: {
-        foreground: palette.neonOrange
+        foreground: palette.amber
       }
     },
     {
@@ -234,7 +234,7 @@ function generateTheme() {
         "constant.language.symbol.ruby"
       ],
       settings: {
-        foreground: palette.neonPurple
+        foreground: palette.neonBlue
       }
     },
     {
@@ -254,14 +254,14 @@ function generateTheme() {
         "constant.language.boolean.ruby"
       ],
       settings: {
-        foreground: palette.neonOrange
+        foreground: palette.amber
       }
     },
     {
       name: "Ruby Numbers",
       scope: "constant.numeric.ruby",
       settings: {
-        foreground: palette.neonOrange
+        foreground: palette.amber
       }
     },
 
