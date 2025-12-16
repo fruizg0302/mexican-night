@@ -975,6 +975,453 @@ function generateTheme() {
     }
   ];
 
+  // Enhanced Python syntax highlighting - Mexican Night
+  const pythonScopes = [
+    // ==========================================
+    // COMMENTS
+    // ==========================================
+    {
+      name: "Python Comments",
+      scope: [
+        "comment.line.number-sign.python",
+        "comment.block.python",
+        "punctuation.definition.comment.python"
+      ],
+      settings: {
+        foreground: palette.tierraBrown,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Python Docstrings",
+      scope: [
+        "string.quoted.docstring.multi.python",
+        "string.quoted.docstring.single.python"
+      ],
+      settings: {
+        foreground: palette.tierraBrown,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // KEYWORDS AND CONTROL FLOW
+    // ==========================================
+    {
+      name: "Python Keywords (def, class, import)",
+      scope: [
+        "keyword.control.function.python",
+        "keyword.control.class.python",
+        "storage.type.function.python",
+        "storage.type.class.python"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Python Control Flow (if, for, while, return) - Italic",
+      scope: [
+        "keyword.control.flow.python",
+        "keyword.control.loop.python",
+        "keyword.control.return.python"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Python Exception Handling (try, except, raise)",
+      scope: [
+        "keyword.control.exception.python"
+      ],
+      settings: {
+        foreground: palette.neonPurple,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Python Import Statements",
+      scope: [
+        "keyword.control.import.python",
+        "keyword.control.import.from.python"
+      ],
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+
+    // ==========================================
+    // FUNCTIONS AND CLASSES
+    // ==========================================
+    {
+      name: "Python Function Definitions",
+      scope: [
+        "entity.name.function.python",
+        "meta.function.python"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Python Class Names",
+      scope: [
+        "entity.name.type.class.python",
+        "entity.other.inherited-class.python"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+    {
+      name: "Python Built-in Functions",
+      scope: [
+        "support.function.builtin.python"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Python Magic Methods (__init__, __str__)",
+      scope: [
+        "support.function.magic.python"
+      ],
+      settings: {
+        foreground: palette.neonPurple,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // PARAMETERS AND VARIABLES
+    // ==========================================
+    {
+      name: "Python Function Parameters",
+      scope: [
+        "variable.parameter.python",
+        "variable.parameter.function.language.python"
+      ],
+      settings: {
+        foreground: palette.neonYellow,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Python self and cls",
+      scope: [
+        "variable.language.special.self.python",
+        "variable.language.special.cls.python",
+        "variable.parameter.function.language.special.self.python",
+        "variable.parameter.function.language.special.cls.python"
+      ],
+      settings: {
+        foreground: palette.redEmphasis,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Python Constants (None, True, False)",
+      scope: [
+        "constant.language.python"
+      ],
+      settings: {
+        foreground: palette.amber
+      }
+    },
+
+    // ==========================================
+    // STRINGS AND F-STRINGS
+    // ==========================================
+    {
+      name: "Python Strings",
+      scope: [
+        "string.quoted.single.python",
+        "string.quoted.double.python"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "Python F-Strings",
+      scope: [
+        "string.quoted.single.format.python",
+        "string.quoted.double.format.python",
+        "meta.fstring.python"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "Python F-String Interpolation Delimiters",
+      scope: [
+        "punctuation.definition.interpolation.begin.python",
+        "punctuation.definition.interpolation.end.python"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Python F-String Embedded Code",
+      scope: [
+        "meta.embedded.expression.python",
+        "meta.embedded.python"
+      ],
+      settings: {
+        foreground: palette.textPrimary
+      }
+    },
+    {
+      name: "Python F-String Format Specifiers",
+      scope: [
+        "constant.character.format.python",
+        "constant.character.format.placeholder.python"
+      ],
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+    {
+      name: "Python Raw Strings",
+      scope: [
+        "string.quoted.single.raw.python",
+        "string.quoted.double.raw.python"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "Python Escape Characters",
+      scope: [
+        "constant.character.escape.python"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+
+    // ==========================================
+    // NUMBERS
+    // ==========================================
+    {
+      name: "Python Numbers",
+      scope: [
+        "constant.numeric.integer.decimal.python",
+        "constant.numeric.integer.binary.python",
+        "constant.numeric.integer.octal.python",
+        "constant.numeric.integer.hexadecimal.python",
+        "constant.numeric.float.python",
+        "constant.numeric.complex.python"
+      ],
+      settings: {
+        foreground: palette.amber
+      }
+    },
+
+    // ==========================================
+    // OPERATORS
+    // ==========================================
+    {
+      name: "Python Operators",
+      scope: [
+        "keyword.operator.arithmetic.python",
+        "keyword.operator.comparison.python",
+        "keyword.operator.assignment.python",
+        "keyword.operator.bitwise.python"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Python Logical Operators (and, or, not, is, in)",
+      scope: [
+        "keyword.operator.logical.python"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Python Walrus Operator (:=)",
+      scope: [
+        "keyword.operator.assignment.python"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+
+    // ==========================================
+    // TYPES AND BUILT-INS
+    // ==========================================
+    {
+      name: "Python Built-in Types",
+      scope: [
+        "support.type.python"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+    {
+      name: "Python Type Annotations",
+      scope: [
+        "meta.function.parameters.annotation.python",
+        "meta.function.return-type.python",
+        "meta.type-hint.python"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Python Type Annotation Punctuation (: and ->)",
+      scope: [
+        "punctuation.separator.annotation.python",
+        "punctuation.separator.annotation.result.python"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+
+    // ==========================================
+    // DECORATORS
+    // ==========================================
+    {
+      name: "Python Decorator @ Symbol",
+      scope: [
+        "punctuation.definition.decorator.python"
+      ],
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+    {
+      name: "Python Decorator Names",
+      scope: [
+        "entity.name.function.decorator.python",
+        "meta.function.decorator.python"
+      ],
+      settings: {
+        foreground: palette.neonPurple,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // DATA STRUCTURES
+    // ==========================================
+    {
+      name: "Python List/Dict/Tuple Brackets",
+      scope: [
+        "punctuation.definition.list.begin.python",
+        "punctuation.definition.list.end.python",
+        "punctuation.definition.dict.begin.python",
+        "punctuation.definition.dict.end.python",
+        "punctuation.definition.tuple.begin.python",
+        "punctuation.definition.tuple.end.python"
+      ],
+      settings: {
+        foreground: palette.textSecondary
+      }
+    },
+    {
+      name: "Python Dict Separator (:)",
+      scope: [
+        "punctuation.separator.dict.python"
+      ],
+      settings: {
+        foreground: palette.textSecondary
+      }
+    },
+
+    // ==========================================
+    // PUNCTUATION
+    // ==========================================
+    {
+      name: "Python Punctuation",
+      scope: [
+        "punctuation.separator.colon.python",
+        "punctuation.separator.period.python",
+        "punctuation.separator.element.python",
+        "punctuation.separator.arguments.python"
+      ],
+      settings: {
+        foreground: palette.textSecondary
+      }
+    },
+    {
+      name: "Python Function Call Parentheses",
+      scope: [
+        "punctuation.definition.arguments.begin.python",
+        "punctuation.definition.arguments.end.python"
+      ],
+      settings: {
+        foreground: palette.textSecondary
+      }
+    },
+
+    // ==========================================
+    // SPECIAL CASES
+    // ==========================================
+    {
+      name: "Python Lambda",
+      scope: [
+        "storage.type.function.lambda.python"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Python Scope Modifiers (global, nonlocal)",
+      scope: [
+        "storage.modifier.python"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Python Dunder Variables (__name__, __file__)",
+      scope: [
+        "variable.language.python"
+      ],
+      settings: {
+        foreground: palette.amber
+      }
+    },
+    {
+      name: "Python Function Calls",
+      scope: [
+        "meta.function-call.python",
+        "meta.function-call.generic.python"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Python Object Properties",
+      scope: [
+        "variable.other.object.python",
+        "variable.other.object.property.python"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    }
+  ];
+
   // Combine all parts
   const theme = {
     ...baseTheme,
@@ -983,6 +1430,7 @@ function generateTheme() {
     tokenColors: [
       ...rubyScopes,
       ...javascriptScopes,
+      ...pythonScopes,
       ...getTokenColors(palette)
     ]
   };
