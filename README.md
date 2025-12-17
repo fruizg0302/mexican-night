@@ -2,6 +2,13 @@
 
 A vibrant VS Code theme that celebrates the lights of Mexico City at night, featuring Rosa Mexicano and Verde Mexicano as primary accent colors. Optimized for Python, Ruby, and JavaScript/TypeScript development with comprehensive syntax highlighting.
 
+## 📸 Screenshots
+
+### Ruby
+![Ruby syntax highlighting](images/screenshot_1.png)
+
+![Ruby syntax highlighting](images/screenshot_2.png)
+
 ## 🎨 Color Palette
 
 Mexican Night uses authentic Mexican-inspired colors:
@@ -56,6 +63,22 @@ Press F5 to test the theme in a new VS Code window.
 1. Open Command Palette (Ctrl+Shift+P / Cmd+Shift+P)
 2. Type "Color Theme"
 3. Select "Mexican Night"
+
+## 🌈 Enable Rainbow Brackets
+
+Mexican Night includes beautiful rainbow bracket colorization, but you need to enable VS Code's built-in bracket pair colorization feature to see it.
+
+Add this to your `settings.json`:
+
+```json
+{
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active"
+}
+```
+
+This will colorize your brackets using the theme's Mexican colors:
+- Rosa Mexicano (pink) → Verde Mexicano (green) → Neon Blue → Neon Yellow → Magenta → Cyan
 
 ## 🔧 Customization
 
