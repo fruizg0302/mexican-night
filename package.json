@@ -2,8 +2,9 @@
   "name": "mexican-night",
   "displayName": "Mexican Night",
   "description": "A vibrant dark theme celebrating Mexico City nights with optimized Python, Ruby, and JavaScript/TypeScript syntax highlighting",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
+  "icon": "icon.png",
   "publisher": "wowzontle",
   "author": {
     "name": "Fernando Ruiz Guzman"

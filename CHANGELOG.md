@@ -2,6 +2,23 @@
 
 All notable changes to the Mexican Night theme extension.
 
+## [1.0.0] - 2024-12-17
+
+### Added
+- 🎨 Theme icon featuring "MN" monogram with Rosa Mexicano and Verde Mexicano colors
+- 📸 Screenshot showcases for Python, TypeScript/React, and Ruby
+- 📚 Comprehensive documentation structure
+  - Configuration guide (docs/CONFIGURATION.md) with customization examples
+  - Development guide (docs/DEVELOPMENT.md)
+  - Publishing guide (docs/PUBLISHING.md)
+- 🌈 Rainbow bracket colorization setup guide in README
+- 📝 Sample files (showcase.py, showcase.tsx) for syntax demonstrations
+
+### Changed
+- ♻️ Reorganized README - slimmed down from 228 to 82 lines
+- 📂 Moved detailed customization and language support docs to CONFIGURATION.md
+- 📦 Ready for VS Code Marketplace publication
+
 ## [0.0.1] - 2024-12-16
 
 ### Added
