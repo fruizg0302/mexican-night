@@ -2,6 +2,34 @@
 
 All notable changes to the Mexican Night theme extension.
 
+## [1.1.0] - 2024-12-27
+
+### Added
+- ☕ **Java Support** - Comprehensive Java syntax highlighting
+  - Keywords and control flow (if, while, return, try/catch)
+  - Primitive types and class/enum/record definitions
+  - Annotations (@Override, @Deprecated, etc.)
+  - Lambda expressions with arrow operator (->)
+  - Generic type parameters
+  - Javadoc comments with special tags
+  - Method definitions and calls
+  - Package and import statements
+- 💧 **Elixir Support** - Full Elixir language highlighting
+  - Module definitions (defmodule, defp, def)
+  - Function definitions and calls
+  - Pipe operator (|>) with bold emphasis
+  - Atoms and symbols
+  - Module attributes (@moduledoc, @spec, etc.)
+  - Sigils and regular expressions (~r, ~s, etc.)
+  - String interpolation
+  - Pattern matching and function captures
+  - Special methods (alias, require, import, use)
+
+### Changed
+- 📝 Updated README to highlight Java and Elixir support
+- 🏷️ Updated publisher name from "wowzontle" to "mercuryatlas"
+- 🖼️ Converted theme icon from SVG to PNG format
+
 ## [1.0.0] - 2024-12-17
 
 ### Added
