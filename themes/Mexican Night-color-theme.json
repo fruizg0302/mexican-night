@@ -1197,6 +1197,219 @@
       }
     },
     {
+      "name": "Elixir Comments",
+      "scope": [
+        "comment.line.number-sign.elixir",
+        "comment.block.elixir"
+      ],
+      "settings": {
+        "foreground": "#8b7355",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Elixir Keywords (def, defp, defmodule)",
+      "scope": [
+        "keyword.control.module.elixir",
+        "keyword.control.elixir"
+      ],
+      "settings": {
+        "foreground": "#ff006e"
+      }
+    },
+    {
+      "name": "Elixir Special Methods (alias, require, import, use)",
+      "scope": "keyword.other.special-method.elixir",
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "Elixir Function Definitions",
+      "scope": "entity.name.function.elixir",
+      "settings": {
+        "foreground": "#06ffc8"
+      }
+    },
+    {
+      "name": "Elixir Function Calls",
+      "scope": [
+        "entity.name.function.call.local.elixir",
+        "entity.name.function.call.dot.elixir"
+      ],
+      "settings": {
+        "foreground": "#06ffc8"
+      }
+    },
+    {
+      "name": "Elixir Function Capture",
+      "scope": "entity.name.function.call.capture.elixir",
+      "settings": {
+        "foreground": "#06ffc8",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Elixir Type Specifications",
+      "scope": "entity.name.function.typespec.elixir",
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "Elixir Module Names",
+      "scope": [
+        "entity.name.type.module.elixir",
+        "entity.name.class.elixir"
+      ],
+      "settings": {
+        "foreground": "#ff9500"
+      }
+    },
+    {
+      "name": "Elixir Variables",
+      "scope": "variable.other.readwrite.elixir",
+      "settings": {
+        "foreground": "#c0caf5"
+      }
+    },
+    {
+      "name": "Elixir Module Attributes (@var)",
+      "scope": "variable.other.constant.elixir",
+      "settings": {
+        "foreground": "#ffd60a"
+      }
+    },
+    {
+      "name": "Elixir Built-in Variables (__MODULE__, __ENV__)",
+      "scope": "variable.language.elixir",
+      "settings": {
+        "foreground": "#ffba08",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Elixir Constants (nil, true, false)",
+      "scope": "constant.language.elixir",
+      "settings": {
+        "foreground": "#ffba08"
+      }
+    },
+    {
+      "name": "Elixir Atoms/Symbols",
+      "scope": "constant.language.symbol.elixir",
+      "settings": {
+        "foreground": "#06ffc8"
+      }
+    },
+    {
+      "name": "Elixir Numbers",
+      "scope": "constant.numeric.elixir",
+      "settings": {
+        "foreground": "#ffba08"
+      }
+    },
+    {
+      "name": "Elixir Strings",
+      "scope": [
+        "string.quoted.single.elixir",
+        "string.quoted.double.elixir"
+      ],
+      "settings": {
+        "foreground": "#00d084"
+      }
+    },
+    {
+      "name": "Elixir Heredocs",
+      "scope": "string.quoted.double.heredoc.elixir",
+      "settings": {
+        "foreground": "#00d084"
+      }
+    },
+    {
+      "name": "Elixir Regular Expressions (~r)",
+      "scope": "string.regexp.interpolated.elixir",
+      "settings": {
+        "foreground": "#06ffc8"
+      }
+    },
+    {
+      "name": "Elixir Sigils",
+      "scope": [
+        "sigil.elixir",
+        "string.quoted.other.literal.elixir"
+      ],
+      "settings": {
+        "foreground": "#00d084"
+      }
+    },
+    {
+      "name": "Elixir String Interpolation",
+      "scope": [
+        "source.elixir.embedded.source",
+        "punctuation.section.embedded.elixir"
+      ],
+      "settings": {
+        "foreground": "#ff006e"
+      }
+    },
+    {
+      "name": "Elixir Arithmetic Operators",
+      "scope": "keyword.operator.arithmetic.elixir",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Elixir Comparison Operators",
+      "scope": "keyword.operator.comparison.elixir",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Elixir Logical Operators",
+      "scope": "keyword.operator.logical.elixir",
+      "settings": {
+        "foreground": "#ff006e"
+      }
+    },
+    {
+      "name": "Elixir Bitwise Operators",
+      "scope": "keyword.operator.bitwise.elixir",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "name": "Elixir Pipe Operator (|>)",
+      "scope": "keyword.operator.other.elixir",
+      "settings": {
+        "foreground": "#ff006e",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Elixir Punctuation",
+      "scope": [
+        "punctuation.section.scope.elixir",
+        "punctuation.section.array.elixir",
+        "punctuation.section.function.elixir",
+        "punctuation.separator.method.elixir"
+      ],
+      "settings": {
+        "foreground": "#a9b1d6"
+      }
+    },
+    {
+      "name": "Elixir Function Parameters",
+      "scope": "variable.parameter.elixir",
+      "settings": {
+        "foreground": "#ffd60a",
+        "fontStyle": "italic"
+      }
+    },
+    {
       "name": "Python Comments",
       "scope": [
         "comment.line.number-sign.python",

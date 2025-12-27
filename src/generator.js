@@ -975,6 +975,258 @@ function generateTheme() {
     }
   ];
 
+  // Enhanced Elixir syntax highlighting - Mexican Night
+  const elixirScopes = [
+    // ==========================================
+    // COMMENTS
+    // ==========================================
+    {
+      name: "Elixir Comments",
+      scope: [
+        "comment.line.number-sign.elixir",
+        "comment.block.elixir"
+      ],
+      settings: {
+        foreground: palette.tierraBrown,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // KEYWORDS AND CONTROL FLOW
+    // ==========================================
+    {
+      name: "Elixir Keywords (def, defp, defmodule)",
+      scope: [
+        "keyword.control.module.elixir",
+        "keyword.control.elixir"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Elixir Special Methods (alias, require, import, use)",
+      scope: "keyword.other.special-method.elixir",
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+
+    // ==========================================
+    // FUNCTIONS
+    // ==========================================
+    {
+      name: "Elixir Function Definitions",
+      scope: "entity.name.function.elixir",
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Elixir Function Calls",
+      scope: [
+        "entity.name.function.call.local.elixir",
+        "entity.name.function.call.dot.elixir"
+      ],
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Elixir Function Capture",
+      scope: "entity.name.function.call.capture.elixir",
+      settings: {
+        foreground: palette.neonBlue,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Elixir Type Specifications",
+      scope: "entity.name.function.typespec.elixir",
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+
+    // ==========================================
+    // MODULES AND TYPES
+    // ==========================================
+    {
+      name: "Elixir Module Names",
+      scope: [
+        "entity.name.type.module.elixir",
+        "entity.name.class.elixir"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+
+    // ==========================================
+    // VARIABLES AND CONSTANTS
+    // ==========================================
+    {
+      name: "Elixir Variables",
+      scope: "variable.other.readwrite.elixir",
+      settings: {
+        foreground: palette.textPrimary
+      }
+    },
+    {
+      name: "Elixir Module Attributes (@var)",
+      scope: "variable.other.constant.elixir",
+      settings: {
+        foreground: palette.neonYellow
+      }
+    },
+    {
+      name: "Elixir Built-in Variables (__MODULE__, __ENV__)",
+      scope: "variable.language.elixir",
+      settings: {
+        foreground: palette.amber,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Elixir Constants (nil, true, false)",
+      scope: "constant.language.elixir",
+      settings: {
+        foreground: palette.amber
+      }
+    },
+    {
+      name: "Elixir Atoms/Symbols",
+      scope: "constant.language.symbol.elixir",
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Elixir Numbers",
+      scope: "constant.numeric.elixir",
+      settings: {
+        foreground: palette.amber
+      }
+    },
+
+    // ==========================================
+    // STRINGS
+    // ==========================================
+    {
+      name: "Elixir Strings",
+      scope: [
+        "string.quoted.single.elixir",
+        "string.quoted.double.elixir"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "Elixir Heredocs",
+      scope: "string.quoted.double.heredoc.elixir",
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "Elixir Regular Expressions (~r)",
+      scope: "string.regexp.interpolated.elixir",
+      settings: {
+        foreground: palette.accentTeal
+      }
+    },
+    {
+      name: "Elixir Sigils",
+      scope: [
+        "sigil.elixir",
+        "string.quoted.other.literal.elixir"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "Elixir String Interpolation",
+      scope: [
+        "source.elixir.embedded.source",
+        "punctuation.section.embedded.elixir"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+
+    // ==========================================
+    // OPERATORS
+    // ==========================================
+    {
+      name: "Elixir Arithmetic Operators",
+      scope: "keyword.operator.arithmetic.elixir",
+      settings: {
+        foreground: palette.accentCyan
+      }
+    },
+    {
+      name: "Elixir Comparison Operators",
+      scope: "keyword.operator.comparison.elixir",
+      settings: {
+        foreground: palette.accentCyan
+      }
+    },
+    {
+      name: "Elixir Logical Operators",
+      scope: "keyword.operator.logical.elixir",
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Elixir Bitwise Operators",
+      scope: "keyword.operator.bitwise.elixir",
+      settings: {
+        foreground: palette.accentCyan
+      }
+    },
+    {
+      name: "Elixir Pipe Operator (|>)",
+      scope: "keyword.operator.other.elixir",
+      settings: {
+        foreground: palette.rosaMexicano,
+        fontStyle: "bold"
+      }
+    },
+
+    // ==========================================
+    // PUNCTUATION
+    // ==========================================
+    {
+      name: "Elixir Punctuation",
+      scope: [
+        "punctuation.section.scope.elixir",
+        "punctuation.section.array.elixir",
+        "punctuation.section.function.elixir",
+        "punctuation.separator.method.elixir"
+      ],
+      settings: {
+        foreground: palette.textSecondary
+      }
+    },
+
+    // ==========================================
+    // PARAMETERS AND PATTERN MATCHING
+    // ==========================================
+    {
+      name: "Elixir Function Parameters",
+      scope: "variable.parameter.elixir",
+      settings: {
+        foreground: palette.neonYellow,
+        fontStyle: "italic"
+      }
+    }
+  ];
+
   // Enhanced Python syntax highlighting - Mexican Night
   const pythonScopes = [
     // ==========================================
@@ -1430,6 +1682,7 @@ function generateTheme() {
     tokenColors: [
       ...rubyScopes,
       ...javascriptScopes,
+      ...elixirScopes,
       ...pythonScopes,
       ...getTokenColors(palette)
     ]
