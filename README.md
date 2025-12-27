@@ -1,6 +1,6 @@
 # 🌃 Mexican Night Theme
 
-A vibrant VS Code theme that celebrates the lights of Mexico City at night, featuring Rosa Mexicano and Verde Mexicano as primary accent colors. Optimized for Python, Ruby, and JavaScript/TypeScript development with comprehensive syntax highlighting.
+A vibrant VS Code theme that celebrates the lights of Mexico City at night, featuring Rosa Mexicano and Verde Mexicano as primary accent colors. Optimized for Python, Ruby, JavaScript/TypeScript, Java, and Elixir development with comprehensive syntax highlighting.
 
 ## 📸 Screenshots
 
@@ -32,6 +32,8 @@ Mexican Night uses authentic Mexican-inspired colors:
 - **🐍 Python Support** - Comprehensive highlighting for Python 3.5+
 - **💎 Ruby Support** - Full Ruby and Rails syntax coverage
 - **⚡ JavaScript/TypeScript** - Modern JS/TS with JSX/TSX support
+- **☕ Java Support** - Complete Java syntax with annotations, lambdas, and generics
+- **💧 Elixir Support** - Full Elixir highlighting with pipe operators and sigils
 - **🌈 Rainbow Brackets** - Colorful bracket pair guides
 - **🎯 Semantic Highlighting** - Enhanced token colors via language servers
 - **⚡ High Contrast Accents** - Rosa Mexicano makes code pop
@@ -65,7 +67,6 @@ Mexican Night uses authentic Mexican-inspired colors:
 
 - **[Configuration & Customization](docs/CONFIGURATION.md)** - Detailed setup, rainbow brackets, language support
 - **[Development Guide](docs/DEVELOPMENT.md)** - Build and modify the theme
-- **[Publishing Guide](docs/PUBLISHING.md)** - Publish to VS Code Marketplace
 
 ## 🤝 Contributing
 
@@ -79,7 +80,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 - Inspired by the vibrant lights and colors of Mexico City at night
 - Structure influenced by the Tokyo Night theme
-- Built with love for the Python, Ruby, and JavaScript communities
+- Built with love for the Python, Ruby, JavaScript, Java, and Elixir communities
 
 ---
 
