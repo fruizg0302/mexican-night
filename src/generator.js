@@ -1227,6 +1227,317 @@ function generateTheme() {
     }
   ];
 
+  // Enhanced Java syntax highlighting - Mexican Night
+  const javaScopes = [
+    // ==========================================
+    // COMMENTS
+    // ==========================================
+    {
+      name: "Java Comments",
+      scope: [
+        "comment.line.double-slash.java",
+        "comment.block.java"
+      ],
+      settings: {
+        foreground: palette.tierraBrown,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Java Javadoc Comments",
+      scope: [
+        "comment.block.javadoc.java",
+        "keyword.other.documentation.javadoc.java"
+      ],
+      settings: {
+        foreground: palette.tierraBrown,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // KEYWORDS AND CONTROL FLOW
+    // ==========================================
+    {
+      name: "Java Keywords (class, interface, enum, record)",
+      scope: [
+        "storage.modifier.java",
+        "keyword.control.new.java"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Java Control Flow (if, else, for, while, return) - Italic",
+      scope: [
+        "keyword.control.java",
+        "keyword.control.throw.java",
+        "keyword.control.try.java",
+        "keyword.control.catch.java",
+        "keyword.control.finally.java"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Java instanceof/new",
+      scope: [
+        "keyword.operator.instanceof.java",
+        "keyword.control.ternary.java"
+      ],
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Java Module Keywords",
+      scope: "keyword.module.java",
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+
+    // ==========================================
+    // TYPES AND STORAGE
+    // ==========================================
+    {
+      name: "Java Primitive Types",
+      scope: "storage.type.primitive.java",
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Java Class/Type Names",
+      scope: [
+        "storage.type.java",
+        "entity.name.type.class.java",
+        "entity.name.type.enum.java",
+        "entity.name.type.record.java"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+    {
+      name: "Java Inherited Class",
+      scope: "entity.other.inherited-class.java",
+      settings: {
+        foreground: palette.neonOrange,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Java Array Types",
+      scope: "storage.type.object.array.java",
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+
+    // ==========================================
+    // FUNCTIONS AND METHODS
+    // ==========================================
+    {
+      name: "Java Method Definitions",
+      scope: "entity.name.function.java",
+      settings: {
+        foreground: palette.neonBlue
+      }
+    },
+    {
+      name: "Java Lambda Arrow (->)",
+      scope: "storage.type.function.arrow.java",
+      settings: {
+        foreground: palette.rosaMexicano,
+        fontStyle: "bold"
+      }
+    },
+
+    // ==========================================
+    // VARIABLES AND PARAMETERS
+    // ==========================================
+    {
+      name: "Java Variables",
+      scope: [
+        "variable.other.object.java",
+        "variable.other.object.property.java"
+      ],
+      settings: {
+        foreground: palette.textPrimary
+      }
+    },
+    {
+      name: "Java Parameters - Italic",
+      scope: "variable.parameter.java",
+      settings: {
+        foreground: palette.neonYellow,
+        fontStyle: "italic"
+      }
+    },
+    {
+      name: "Java this keyword - Italic",
+      scope: "variable.language.this.java",
+      settings: {
+        foreground: palette.redEmphasis,
+        fontStyle: "italic"
+      }
+    },
+
+    // ==========================================
+    // CONSTANTS
+    // ==========================================
+    {
+      name: "Java Constants (true, false, null)",
+      scope: "constant.language.java",
+      settings: {
+        foreground: palette.amber
+      }
+    },
+    {
+      name: "Java Numbers",
+      scope: [
+        "constant.numeric.decimal.java",
+        "constant.numeric.hex.java",
+        "constant.numeric.binary.java",
+        "constant.numeric.octal.java"
+      ],
+      settings: {
+        foreground: palette.amber
+      }
+    },
+    {
+      name: "Java Enum Constants",
+      scope: "constant.other.enum.java",
+      settings: {
+        foreground: palette.amber
+      }
+    },
+
+    // ==========================================
+    // STRINGS
+    // ==========================================
+    {
+      name: "Java Strings",
+      scope: [
+        "string.quoted.double.java",
+        "string.quoted.single.java",
+        "string.quoted.triple.java"
+      ],
+      settings: {
+        foreground: palette.verdeMexicanoLight
+      }
+    },
+    {
+      name: "Java String Escape Characters",
+      scope: "constant.character.escape.java",
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+
+    // ==========================================
+    // ANNOTATIONS
+    // ==========================================
+    {
+      name: "Java Annotations (@)",
+      scope: [
+        "punctuation.definition.annotation.java",
+        "storage.type.annotation.java"
+      ],
+      settings: {
+        foreground: palette.neonPurple
+      }
+    },
+
+    // ==========================================
+    // OPERATORS
+    // ==========================================
+    {
+      name: "Java Arithmetic Operators",
+      scope: "keyword.operator.arithmetic.java",
+      settings: {
+        foreground: palette.accentCyan
+      }
+    },
+    {
+      name: "Java Comparison Operators",
+      scope: "keyword.operator.comparison.java",
+      settings: {
+        foreground: palette.accentCyan
+      }
+    },
+    {
+      name: "Java Assignment Operators",
+      scope: "keyword.operator.assignment.java",
+      settings: {
+        foreground: palette.accentCyan
+      }
+    },
+    {
+      name: "Java Logical Operators",
+      scope: "keyword.operator.logical.java",
+      settings: {
+        foreground: palette.rosaMexicano
+      }
+    },
+    {
+      name: "Java Bitwise Operators",
+      scope: "keyword.operator.bitwise.java",
+      settings: {
+        foreground: palette.accentCyan
+      }
+    },
+
+    // ==========================================
+    // PUNCTUATION
+    // ==========================================
+    {
+      name: "Java Punctuation",
+      scope: [
+        "punctuation.separator.delimiter.java",
+        "punctuation.terminator.java",
+        "punctuation.bracket.round.java",
+        "punctuation.bracket.square.java",
+        "punctuation.bracket.curly.java"
+      ],
+      settings: {
+        foreground: palette.textSecondary
+      }
+    },
+
+    // ==========================================
+    // GENERICS
+    // ==========================================
+    {
+      name: "Java Generic Type Parameters",
+      scope: [
+        "storage.type.generic.java",
+        "punctuation.bracket.angle.java"
+      ],
+      settings: {
+        foreground: palette.neonOrange
+      }
+    },
+
+    // ==========================================
+    // PACKAGE AND IMPORTS
+    // ==========================================
+    {
+      name: "Java Package/Import Keywords",
+      scope: [
+        "keyword.other.package.java",
+        "keyword.other.import.java"
+      ],
+      settings: {
+        foreground: palette.neonPurple
+      }
+    }
+  ];
+
   // Enhanced Python syntax highlighting - Mexican Night
   const pythonScopes = [
     // ==========================================
@@ -1682,6 +1993,7 @@ function generateTheme() {
     tokenColors: [
       ...rubyScopes,
       ...javascriptScopes,
+      ...javaScopes,
       ...elixirScopes,
       ...pythonScopes,
       ...getTokenColors(palette)
