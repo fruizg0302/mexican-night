@@ -5,10 +5,9 @@ This document outlines the steps to publish the Mexican Night VS Code theme to G
 ## Current Status
 
 ✅ **Completed:**
-- Theme installed locally in VS Code (can activate with Cmd+K Cmd+T → "Mexican Night")
-- package.json updated with correct publisher name (`wowzontle`) and GitHub URL
-- Git repository initialized with first commit
-- Remote configured: https://github.com/fruizg0302/mexican-night.git
+- Published on GitHub: https://github.com/fruizg0302/mexican-night
+- package.json configured with publisher `mercuryatlas` and repository URL
+- No tagged release yet — see Task 12 of the theme-audit-fixes plan for the gated release step
 
 ## Next Steps
 
@@ -40,7 +39,7 @@ git push -u origin main
 2. Sign in with your Microsoft account or GitHub account
 3. Click "Create Publisher"
 4. Fill in:
-   - **ID**: `wowzontle` (must match package.json)
+   - **ID**: `mercuryatlas` (must match package.json)
    - **Name**: Your display name (e.g., "Wowzontle")
    - **Description**: Optional description about yourself
 
@@ -70,7 +69,7 @@ npm install -g @vscode/vsce
 #### 2.4 Login with vsce
 
 ```bash
-vsce login wowzontle
+vsce login mercuryatlas
 ```
 
 When prompted, paste your Personal Access Token (PAT) from step 2.2.
@@ -94,7 +93,7 @@ vsce publish
 ### 3. Verify Publication
 
 1. Wait 5-10 minutes for the marketplace to process your extension
-2. Visit https://marketplace.visualstudio.com/items?itemName=wowzontle.mexican-night
+2. Visit https://marketplace.visualstudio.com/items?itemName=mercuryatlas.mexican-night
 3. Search for "Mexican Night" in VS Code Extensions marketplace
 4. Install and test from the marketplace
 
@@ -103,11 +102,11 @@ vsce publish
 Consider completing these before your first marketplace publish:
 
 - [ ] Test theme thoroughly with different file types (Ruby, JavaScript, TypeScript, etc.)
-- [ ] Add screenshots to README.md showing the theme in action
-- [ ] Update version to `1.0.0` in package.json (currently `0.0.1`)
-- [ ] Review CHANGELOG.md and update with v1.0.0 release notes
-- [ ] Add a LICENSE file (MIT is common for themes)
-- [ ] Add an icon for your theme (icon.png, 128x128px, update package.json with "icon" field)
+- [x] Add screenshots to README.md showing the theme in action
+- [x] Version updated in package.json
+- [x] Review CHANGELOG.md and update with v1.0.0 release notes
+- [x] Add a LICENSE file (MIT is common for themes)
+- [x] Add an icon for your theme (icon.png, 128x128px, update package.json with "icon" field)
 - [ ] Test the packaged .vsix locally before publishing
 
 ## Updating After Publication
@@ -136,7 +135,7 @@ vsce publish major   # 1.0.0 -> 2.0.0
 vsce publish 1.0.0
 
 # Unpublish (use with caution!)
-vsce unpublish wowzontle.mexican-night
+vsce unpublish mercuryatlas.mexican-night
 ```
 
 ## Troubleshooting
@@ -145,9 +144,9 @@ vsce unpublish wowzontle.mexican-night
 **Solution**: Run `npm install -g @vscode/vsce`
 
 **Problem**: "The Personal Access Token has expired"
-**Solution**: Generate a new PAT at https://dev.azure.com/ and run `vsce login wowzontle` again
+**Solution**: Generate a new PAT at https://dev.azure.com/ and run `vsce login mercuryatlas` again
 
-**Problem**: "Publisher 'wowzontle' not found"
+**Problem**: "Publisher 'mercuryatlas' not found"
 **Solution**: Create the publisher at https://marketplace.visualstudio.com/manage first
 
 **Problem**: "Extension validation failed"
