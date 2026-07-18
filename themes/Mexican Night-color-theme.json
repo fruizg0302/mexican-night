@@ -3,6 +3,7 @@
   "author": "Fernando Ruiz Guzman",
   "type": "dark",
   "semanticClass": "mexican-night",
+  "semanticHighlighting": true,
   "semanticTokenColors": {
     "parameter.declaration": {
       "foreground": "#ffd60a",
@@ -49,7 +50,7 @@
       "foreground": "#06ffc8"
     },
     "type": {
-      "foreground": "#06ffc8"
+      "foreground": "#FF69B4"
     },
     "type.declaration": {
       "foreground": "#ff9500"
@@ -61,10 +62,10 @@
       "foreground": "#ff9500"
     },
     "interface": {
-      "foreground": "#ff9500"
+      "foreground": "#ffd60a"
     },
     "interface.declaration": {
-      "foreground": "#ff9500"
+      "foreground": "#ffd60a"
     },
     "enum": {
       "foreground": "#ff9500"

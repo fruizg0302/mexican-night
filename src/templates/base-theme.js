@@ -6,6 +6,7 @@ const baseTheme = {
   author: "Fernando Ruiz Guzman",
   type: "dark",
   semanticClass: "mexican-night",
+  semanticHighlighting: true,
   semanticTokenColors: {},
   colors: {},
   tokenColors: []

@@ -61,7 +61,7 @@ function getSemanticTokenColors(palette) {
 
     // Types (TypeScript)
     type: {
-      foreground: palette.neonBlue,         // Turquoise for types
+      foreground: palette.accentCyan,
     },
     "type.declaration": {
       foreground: palette.neonOrange,       // Orange for type declarations
@@ -75,10 +75,10 @@ function getSemanticTokenColors(palette) {
       foreground: palette.neonOrange,
     },
     interface: {
-      foreground: palette.neonOrange,       // Orange for interfaces
+      foreground: palette.neonYellow,
     },
     "interface.declaration": {
-      foreground: palette.neonOrange,
+      foreground: palette.neonYellow,
     },
     enum: {
       foreground: palette.neonOrange,
