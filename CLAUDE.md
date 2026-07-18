@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Mexican Night is a VS Code color theme extension that celebrates the lights of Mexico City at night. Features Rosa Mexicano (#E4007C) and Verde Mexicano (#006341) as primary accent colors with special optimization for Ruby and JavaScript/TypeScript development.
+Mexican Night is a VS Code color theme extension that celebrates the lights of Mexico City at night. Features Rosa Mexicano (#ff006e) and Verde Mexicano (#006341) as primary accent colors with special optimization for Ruby and JavaScript/TypeScript development.
 
 ## Development Commands
 
@@ -62,7 +62,7 @@ samples/                # Test files for verifying syntax highlighting
 - Exports: `getUIColors(palette)` function
 - Returns object with VS Code color keys (editor.background, statusBar.foreground, etc.)
 - Includes bracket pair colorization config
-- Uses hex colors with transparency suffixes (e.g., "#E4007C30" for 30% opacity)
+- Uses hex colors with transparency suffixes (e.g., "#ff006e30" for 30% opacity)
 
 **`src/colors/syntax.js`**
 - Defines TextMate scope rules for syntax highlighting
@@ -97,7 +97,7 @@ The theme references these color variables from palette.js:
 **Background & UI**
 - `nightSky` / `nightSkyLight` / `nightSkyMedium` / `nightSkyBright` - Background variations
 - `textPrimary` / `textSecondary` / `textMuted` / `textDark` - Text variations
-- `error`, `warning`, `info`, `success` - Semantic state colors
+- `error`, `warning`, `info` - Semantic state colors
 
 **Note**: The palette.js file references many colors that may not all exist yet. When editing, ensure referenced colors are defined.
 
@@ -138,7 +138,7 @@ The theme references these color variables from palette.js:
 - **Publisher name**: Set to "wowzontle" in package.json
 - **Repository URL**: https://github.com/fruizg0302/mexican-night
 - **Theme icon**: No icon defined - add "icon" field to package.json if desired
-- **Color transparency**: Use hex with alpha suffix (e.g., "#E4007C30" for 30% opacity)
+- **Color transparency**: Use hex with alpha suffix (e.g., "#ff006e30" for 30% opacity)
 - **Scope specificity**: More specific scopes override general ones (TextMate rule)
 - **Font styles**: Options are "italic", "bold", "italic bold", "underline"
 - **Generated files**: The JSON in `themes/` is generated - do not edit directly
