@@ -898,13 +898,15 @@ change to:
 - **[Publishing Guide](docs/PUBLISHING.md)** - Publish to VS Code Marketplace
 ```
 
-- [ ] **Step 4: CLAUDE.md** — six corrections:
+- [ ] **Step 4: CLAUDE.md** — eight corrections:
 1. Project Overview: `Rosa Mexicano (#E4007C)` → `Rosa Mexicano (#ff006e)`.
 2. palette.js bullet: delete the sentence `Uses ES6 export syntax but also CommonJS module.exports` (ESM only).
 3. base-theme.js bullet: replace `Not actually used by generator currently (generator defines inline)` with `Spread into the theme by generator.js (supplies name/author/type/semanticClass/semanticHighlighting)`.
 4. Important Notes (currently line 140): replace `**Theme icon**: No icon defined - add "icon" field to package.json if desired` with `**Theme icon**: icon.png (128x128)`. (Not "generated from icon.svg" — that source file was deleted upstream; icon.png is now the only icon artifact in the repo.)
 5. Language Support: `Instance variables: Cyan` → `Instance variables: Mexican Pink (#FF69B4)`; `Object keys: Cyan` → `Object keys: Mexican Pink (#FF69B4)`.
 6. Important Notes (currently line 138): `**Publisher name**: Set to "wowzontle" in package.json` → `**Publisher name**: Set to "mercuryatlas" in package.json` (renamed upstream, after this plan's original audit).
+7. Directory Structure diagram (lines 34-49): Task 8 deleted `src/templates/tokyo-night-reference.json` — remove line 44 (`│   └── tokyo-night-reference.json  # Reference theme structure`) and change line 43 from `│   ├── base-theme.js   # Theme metadata and structure skeleton` to `│   └── base-theme.js   # Theme metadata and structure skeleton` (it's now the only file in templates/, so it needs the closing-branch character `└──` instead of `├──`).
+8. `src/templates/base-theme.js` "Key Files" bullet list: Task 8 also deleted the `semanticTokenCategories`/`tokenColorCategories` exports this file used to have — remove the now-false bullet `Reference lists of semantic token and token color categories`, leaving only `Theme metadata skeleton (name, author, type, semanticClass)` plus the corrected point 3 above.
 Also add one line under Development Workflow: `7. Run npm run check — every TextMate scope must be defined by exactly one rule (CI enforces this)`.
 
 Note (not a task step — flagging only): CLAUDE.md's "Language Support" section documents Ruby and JavaScript/TypeScript token-by-token but has no equivalent section for Python (pre-existing gap) or the newly-added Java/Elixir. Writing that out is a documentation-completeness task, not a bug fix; ask the user before expanding this plan to cover it.
