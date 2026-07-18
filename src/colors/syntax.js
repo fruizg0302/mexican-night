@@ -288,7 +288,6 @@ function getTokenColors(palette) {
       name: "Operator, Misc",
       scope: [
         "keyword.control",
-        "constant.other.color",
         "punctuation",
         "meta.tag",
         "punctuation.definition.tag",
@@ -392,7 +391,6 @@ function getTokenColors(palette) {
       name: "Class, Support",
       scope: [
         "entity.name",
-        "support.type",
         "support.class",
         "support.other.namespace.use.php",
         "meta.use.php",
@@ -475,8 +473,8 @@ function getTokenColors(palette) {
       },
     },
     {
-      name: "entity.name.method.js",
-      scope: ["entity.name.method.js"],
+      name: "entity.name.method",
+      scope: ["entity.name.method.js", "entity.name.method.ts"],
       settings: {
         fontStyle: "italic",
         foreground: palette.neonBlue,
@@ -787,13 +785,6 @@ function getTokenColors(palette) {
       },
     },
     {
-      name: "Markdown - Raw Block Fenced",
-      scope: ["markup.raw.block.fenced.markdown"],
-      settings: {
-        foreground: palette.textDark,
-      },
-    },
-    {
       name: "Markdown - Fenced Bode Block",
       scope: ["punctuation.definition.fenced.markdown"],
       settings: {
@@ -804,7 +795,6 @@ function getTokenColors(palette) {
       name: "Markdown - Fenced Bode Block Variable",
       scope: [
         "markup.raw.block.fenced.markdown",
-        "variable.language.fenced.markdown",
         "punctuation.section.class.end",
       ],
       settings: {
@@ -839,6 +829,8 @@ function getTokenColors(palette) {
       scope: [
         "constant.other.symbol.ruby",
         "constant.other.symbol.hashkey.ruby",
+        "constant.other.symbol.hashkey.parameter.function.ruby",
+        "constant.language.symbol.ruby",
       ],
       settings: {
         foreground: palette.verdeMexicanoLight,
@@ -895,6 +887,7 @@ function getTokenColors(palette) {
       ],
       settings: {
         foreground: palette.rosaMexicano,
+        fontStyle: "italic",
       },
     },
     {
@@ -944,7 +937,7 @@ function getTokenColors(palette) {
     },
     {
       name: "Ruby - Constants",
-      scope: ["variable.other.constant.ruby", "constant.other.symbol.ruby"],
+      scope: ["variable.other.constant.ruby"],
       settings: {
         foreground: palette.neonYellow,
       },
@@ -953,7 +946,7 @@ function getTokenColors(palette) {
       name: "Ruby - Instance Variables",
       scope: [
         "variable.other.readwrite.instance.ruby",
-        "punctuation.definition.variable.ruby",
+        "variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby",
       ],
       settings: {
         foreground: palette.accentCyan,
@@ -961,7 +954,10 @@ function getTokenColors(palette) {
     },
     {
       name: "Ruby - Class Variables",
-      scope: ["variable.other.readwrite.class.ruby"],
+      scope: [
+        "variable.other.readwrite.class.ruby",
+        "variable.other.readwrite.class.ruby punctuation.definition.variable.ruby",
+      ],
       settings: {
         foreground: palette.accentMagenta,
       },
@@ -970,7 +966,8 @@ function getTokenColors(palette) {
       name: "Ruby - Global Variables",
       scope: [
         "variable.other.readwrite.global.ruby",
-        "punctuation.definition.variable.ruby",
+        "variable.other.readwrite.global.pre-defined.ruby",
+        "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
       ],
       settings: {
         foreground: palette.neonOrange,
@@ -988,8 +985,9 @@ function getTokenColors(palette) {
       name: "Ruby - Regex",
       scope: [
         "string.regexp.ruby",
-        "punctuation.definition.string.begin.ruby",
-        "punctuation.definition.string.end.ruby",
+        "string.regexp.interpolated.ruby",
+        "string.regexp.ruby punctuation.definition.string.begin.ruby",
+        "string.regexp.ruby punctuation.definition.string.end.ruby",
       ],
       settings: {
         foreground: palette.accentTeal,
@@ -1002,7 +1000,6 @@ function getTokenColors(palette) {
         "keyword.operator.comparison.ruby",
         "keyword.operator.logical.ruby",
         "punctuation.separator.method.ruby",
-        "punctuation.separator.variable.ruby",
         "punctuation.separator.key-value.ruby",
       ],
       settings: {
@@ -1030,6 +1027,7 @@ function getTokenColors(palette) {
       ],
       settings: {
         foreground: palette.neonOrange,
+        fontStyle: "italic",
       },
     },
     {
@@ -1095,16 +1093,6 @@ function getTokenColors(palette) {
       },
     },
     {
-      name: "Ruby - Method Definition Body",
-      scope: [
-        "meta.function.method.with-arguments.ruby",
-        "meta.function.method.without-arguments.ruby",
-      ],
-      settings: {
-        // This ensures method content inherits proper coloring
-      },
-    },
-    {
       name: "Ruby - Block Parameters",
       scope: [
         "variable.other.block.ruby",
@@ -1112,6 +1100,7 @@ function getTokenColors(palette) {
       ],
       settings: {
         foreground: palette.neonOrange,
+        fontStyle: "italic",
       },
     },
     {
@@ -1145,8 +1134,14 @@ function getTokenColors(palette) {
     },
     {
       name: "Ruby - Heredoc",
+      scope: ["string.unquoted.heredoc.ruby"],
+      settings: {
+        foreground: palette.verdeMexicanoLight,
+      },
+    },
+    {
+      name: "Ruby - String Delimiters",
       scope: [
-        "string.unquoted.heredoc.ruby",
         "punctuation.definition.string.begin.ruby",
         "punctuation.definition.string.end.ruby",
       ],
@@ -1206,6 +1201,8 @@ function getTokenColors(palette) {
         "keyword.control.export.ts",
         "keyword.control.from.js",
         "keyword.control.from.ts",
+        "keyword.control.as.js",
+        "keyword.control.as.ts",
       ],
       settings: {
         foreground: palette.rosaMexicano,
@@ -1223,6 +1220,7 @@ function getTokenColors(palette) {
       scope: [
         "entity.name.tag.js",
         "entity.name.tag.tsx",
+        "entity.name.tag.jsx",
         "support.class.component.js",
         "support.class.component.tsx",
       ],
@@ -1250,9 +1248,15 @@ function getTokenColors(palette) {
     },
     {
       name: "JS/TS - Console",
-      scope: ["support.class.console.js", "support.class.console.ts"],
+      scope: [
+        "support.class.console.js",
+        "support.class.console.ts",
+        "support.function.console.js",
+        "support.function.console.ts",
+      ],
       settings: {
         foreground: palette.neonBlue,
+        fontStyle: "bold",
       },
     },
     {

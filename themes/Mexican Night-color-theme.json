@@ -369,33 +369,10 @@
       }
     },
     {
-      "name": "Ruby Keywords (def, class, module)",
-      "scope": [
-        "keyword.control.def.ruby",
-        "keyword.control.class.ruby",
-        "keyword.control.module.ruby",
-        "keyword.control.start-block.ruby"
-      ],
-      "settings": {
-        "foreground": "#ff006e"
-      }
-    },
-    {
       "name": "Ruby Control Keywords",
       "scope": "keyword.control.ruby",
       "settings": {
         "foreground": "#ff006e"
-      }
-    },
-    {
-      "name": "Ruby Flow Keywords (if, else, return) - Italic",
-      "scope": [
-        "keyword.control.conditional.ruby",
-        "keyword.control.loop.ruby"
-      ],
-      "settings": {
-        "foreground": "#ff006e",
-        "fontStyle": "italic"
       }
     },
     {
@@ -421,32 +398,11 @@
       }
     },
     {
-      "name": "Ruby Class Names",
-      "scope": "entity.name.type.class.ruby",
-      "settings": {
-        "foreground": "#ff9500"
-      }
-    },
-    {
-      "name": "Ruby Module Names",
-      "scope": "entity.name.type.module.ruby",
-      "settings": {
-        "foreground": "#ff9500"
-      }
-    },
-    {
       "name": "Ruby Inherited Class - Italic",
       "scope": "entity.other.inherited-class.ruby",
       "settings": {
         "foreground": "#ff9500",
         "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Ruby Support Classes",
-      "scope": "support.class.ruby",
-      "settings": {
-        "foreground": "#ff9500"
       }
     },
     {
@@ -464,112 +420,10 @@
       }
     },
     {
-      "name": "Ruby Instance Variables (@var)",
-      "scope": "variable.other.readwrite.instance.ruby",
-      "settings": {
-        "foreground": "#ffd60a"
-      }
-    },
-    {
-      "name": "Ruby Class Variables (@@var)",
-      "scope": "variable.other.readwrite.class.ruby",
-      "settings": {
-        "foreground": "#fb8500"
-      }
-    },
-    {
-      "name": "Ruby Global Variables ($var) - Warning Color",
-      "scope": [
-        "variable.other.readwrite.global.ruby",
-        "variable.other.readwrite.global.pre-defined.ruby"
-      ],
-      "settings": {
-        "foreground": "#dc2f02"
-      }
-    },
-    {
-      "name": "Ruby self/super - Italic Warning",
-      "scope": [
-        "variable.language.self.ruby",
-        "variable.language.super.ruby"
-      ],
-      "settings": {
-        "foreground": "#d00000",
-        "fontStyle": "italic"
-      }
-    },
-    {
       "name": "Ruby __FILE__ and __LINE__",
       "scope": "variable.language.ruby",
       "settings": {
         "foreground": "#ffd60a"
-      }
-    },
-    {
-      "name": "Ruby Variable Sigils (@, @@, $)",
-      "scope": "punctuation.definition.variable.ruby",
-      "settings": {
-        "foreground": "#a9b1d6"
-      }
-    },
-    {
-      "name": "Ruby Method Parameters - Italic",
-      "scope": "variable.parameter.function.ruby",
-      "settings": {
-        "foreground": "#ffd60a",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Ruby Block Parameters - Italic",
-      "scope": "variable.other.block.ruby",
-      "settings": {
-        "foreground": "#ffd60a",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Ruby Block Parameter Pipes (|x, y|)",
-      "scope": "punctuation.separator.variable.ruby",
-      "settings": {
-        "foreground": "#828bb8"
-      }
-    },
-    {
-      "name": "Ruby Constants (CONSTANT)",
-      "scope": "variable.other.constant.ruby",
-      "settings": {
-        "foreground": "#ffba08"
-      }
-    },
-    {
-      "name": "Ruby Symbols (:symbol)",
-      "scope": [
-        "constant.other.symbol.ruby",
-        "constant.language.symbol.ruby"
-      ],
-      "settings": {
-        "foreground": "#06ffc8"
-      }
-    },
-    {
-      "name": "Ruby Hash Key Symbols (key: value)",
-      "scope": [
-        "constant.other.symbol.hashkey.ruby",
-        "constant.other.symbol.hashkey.parameter.function.ruby"
-      ],
-      "settings": {
-        "foreground": "#FF69B4"
-      }
-    },
-    {
-      "name": "Ruby nil, true, false",
-      "scope": [
-        "constant.language.nil.ruby",
-        "constant.language.boolean.ruby"
-      ],
-      "settings": {
-        "foreground": "#ffba08"
       }
     },
     {
@@ -589,26 +443,6 @@
       ],
       "settings": {
         "foreground": "#00d084"
-      }
-    },
-    {
-      "name": "Ruby String Interpolation Delimiters (#{})",
-      "scope": [
-        "punctuation.section.embedded.begin.ruby",
-        "punctuation.section.embedded.end.ruby"
-      ],
-      "settings": {
-        "foreground": "#ff006e"
-      }
-    },
-    {
-      "name": "Ruby Embedded Code in Interpolation",
-      "scope": [
-        "meta.embedded.line.ruby",
-        "source.ruby.embedded.source"
-      ],
-      "settings": {
-        "foreground": "#c0caf5"
       }
     },
     {
@@ -683,13 +517,6 @@
     {
       "name": "Ruby Inheritance Separator (<)",
       "scope": "punctuation.separator.inheritance.ruby",
-      "settings": {
-        "foreground": "#a9b1d6"
-      }
-    },
-    {
-      "name": "Ruby Method Call Separator (.)",
-      "scope": "punctuation.separator.method.ruby",
       "settings": {
         "foreground": "#a9b1d6"
       }
@@ -819,14 +646,10 @@
     {
       "name": "JS/TS Control Flow (italic)",
       "scope": [
-        "keyword.control.flow.js",
-        "keyword.control.flow.ts",
         "keyword.control.return.js",
         "keyword.control.return.ts",
         "keyword.control.trycatch.js",
-        "keyword.control.trycatch.ts",
-        "storage.modifier.async.js",
-        "storage.modifier.async.ts"
+        "keyword.control.trycatch.ts"
       ],
       "settings": {
         "foreground": "#ff006e",
@@ -834,28 +657,10 @@
       }
     },
     {
-      "name": "JS/TS Import/Export",
-      "scope": [
-        "keyword.control.import.js",
-        "keyword.control.import.ts",
-        "keyword.control.export.js",
-        "keyword.control.export.ts",
-        "keyword.control.from.js",
-        "keyword.control.from.ts",
-        "keyword.control.as.js",
-        "keyword.control.as.ts"
-      ],
-      "settings": {
-        "foreground": "#BB9AF7"
-      }
-    },
-    {
       "name": "JS/TS Function Definitions",
       "scope": [
         "entity.name.function.js",
-        "entity.name.function.ts",
-        "entity.name.method.js",
-        "entity.name.method.ts"
+        "entity.name.function.ts"
       ],
       "settings": {
         "foreground": "#06ffc8"
@@ -874,19 +679,6 @@
       }
     },
     {
-      "name": "JS/TS Console",
-      "scope": [
-        "support.function.console.js",
-        "support.function.console.ts",
-        "support.class.console.js",
-        "support.class.console.ts"
-      ],
-      "settings": {
-        "foreground": "#ffd60a",
-        "fontStyle": "bold"
-      }
-    },
-    {
       "name": "JS/TS Class Names",
       "scope": [
         "entity.name.type.class.js",
@@ -899,20 +691,8 @@
       }
     },
     {
-      "name": "TypeScript Interface Names",
-      "scope": [
-        "entity.name.type.interface.ts",
-        "entity.name.type.interface.tsx"
-      ],
-      "settings": {
-        "foreground": "#ff9500"
-      }
-    },
-    {
       "name": "TypeScript Type Names",
       "scope": [
-        "entity.name.type.ts",
-        "entity.name.type.tsx",
         "entity.name.type.alias.ts",
         "entity.name.type.alias.tsx"
       ],
@@ -1042,9 +822,7 @@
       "name": "JS/TS Object Properties",
       "scope": [
         "variable.other.property.js",
-        "variable.other.property.ts",
-        "meta.object-literal.key.js",
-        "meta.object-literal.key.ts"
+        "variable.other.property.ts"
       ],
       "settings": {
         "foreground": "#ff9500"
@@ -1089,20 +867,6 @@
       }
     },
     {
-      "name": "TypeScript Type Annotations",
-      "scope": [
-        "meta.type.annotation.ts",
-        "meta.type.annotation.tsx",
-        "support.type.primitive.ts",
-        "support.type.primitive.tsx",
-        "keyword.operator.type.annotation.ts",
-        "keyword.operator.type.annotation.tsx"
-      ],
-      "settings": {
-        "foreground": "#06ffc8"
-      }
-    },
-    {
       "name": "TypeScript Optional Chaining & Nullish Coalescing",
       "scope": [
         "keyword.operator.optional.ts",
@@ -1122,19 +886,6 @@
       ],
       "settings": {
         "foreground": "#BB9AF7"
-      }
-    },
-    {
-      "name": "JSX/TSX Tags",
-      "scope": [
-        "entity.name.tag.js",
-        "entity.name.tag.jsx",
-        "entity.name.tag.tsx",
-        "support.class.component.js",
-        "support.class.component.tsx"
-      ],
-      "settings": {
-        "foreground": "#fb8500"
       }
     },
     {
@@ -2140,7 +1891,6 @@
       "name": "Operator, Misc",
       "scope": [
         "keyword.control",
-        "constant.other.color",
         "punctuation",
         "meta.tag",
         "punctuation.definition.tag",
@@ -2256,7 +2006,6 @@
       "name": "Class, Support",
       "scope": [
         "entity.name",
-        "support.type",
         "support.class",
         "support.other.namespace.use.php",
         "meta.use.php",
@@ -2345,9 +2094,10 @@
       }
     },
     {
-      "name": "entity.name.method.js",
+      "name": "entity.name.method",
       "scope": [
-        "entity.name.method.js"
+        "entity.name.method.js",
+        "entity.name.method.ts"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -2701,15 +2451,6 @@
       }
     },
     {
-      "name": "Markdown - Raw Block Fenced",
-      "scope": [
-        "markup.raw.block.fenced.markdown"
-      ],
-      "settings": {
-        "foreground": "#565f89"
-      }
-    },
-    {
       "name": "Markdown - Fenced Bode Block",
       "scope": [
         "punctuation.definition.fenced.markdown"
@@ -2722,7 +2463,6 @@
       "name": "Markdown - Fenced Bode Block Variable",
       "scope": [
         "markup.raw.block.fenced.markdown",
-        "variable.language.fenced.markdown",
         "punctuation.section.class.end"
       ],
       "settings": {
@@ -2761,7 +2501,9 @@
       "name": "Ruby - Symbols",
       "scope": [
         "constant.other.symbol.ruby",
-        "constant.other.symbol.hashkey.ruby"
+        "constant.other.symbol.hashkey.ruby",
+        "constant.other.symbol.hashkey.parameter.function.ruby",
+        "constant.language.symbol.ruby"
       ],
       "settings": {
         "foreground": "#00d084"
@@ -2823,7 +2565,8 @@
         "keyword.control.flow.retry.ruby"
       ],
       "settings": {
-        "foreground": "#ff006e"
+        "foreground": "#ff006e",
+        "fontStyle": "italic"
       }
     },
     {
@@ -2877,8 +2620,7 @@
     {
       "name": "Ruby - Constants",
       "scope": [
-        "variable.other.constant.ruby",
-        "constant.other.symbol.ruby"
+        "variable.other.constant.ruby"
       ],
       "settings": {
         "foreground": "#ffd60a"
@@ -2888,7 +2630,7 @@
       "name": "Ruby - Instance Variables",
       "scope": [
         "variable.other.readwrite.instance.ruby",
-        "punctuation.definition.variable.ruby"
+        "variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby"
       ],
       "settings": {
         "foreground": "#FF69B4"
@@ -2897,7 +2639,8 @@
     {
       "name": "Ruby - Class Variables",
       "scope": [
-        "variable.other.readwrite.class.ruby"
+        "variable.other.readwrite.class.ruby",
+        "variable.other.readwrite.class.ruby punctuation.definition.variable.ruby"
       ],
       "settings": {
         "foreground": "#ff79c6"
@@ -2907,7 +2650,8 @@
       "name": "Ruby - Global Variables",
       "scope": [
         "variable.other.readwrite.global.ruby",
-        "punctuation.definition.variable.ruby"
+        "variable.other.readwrite.global.pre-defined.ruby",
+        "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby"
       ],
       "settings": {
         "foreground": "#ff9500",
@@ -2928,8 +2672,9 @@
       "name": "Ruby - Regex",
       "scope": [
         "string.regexp.ruby",
-        "punctuation.definition.string.begin.ruby",
-        "punctuation.definition.string.end.ruby"
+        "string.regexp.interpolated.ruby",
+        "string.regexp.ruby punctuation.definition.string.begin.ruby",
+        "string.regexp.ruby punctuation.definition.string.end.ruby"
       ],
       "settings": {
         "foreground": "#06ffc8"
@@ -2942,7 +2687,6 @@
         "keyword.operator.comparison.ruby",
         "keyword.operator.logical.ruby",
         "punctuation.separator.method.ruby",
-        "punctuation.separator.variable.ruby",
         "punctuation.separator.key-value.ruby"
       ],
       "settings": {
@@ -2968,7 +2712,8 @@
         "meta.function.optional-parameters.ruby"
       ],
       "settings": {
-        "foreground": "#ff9500"
+        "foreground": "#ff9500",
+        "fontStyle": "italic"
       }
     },
     {
@@ -3042,21 +2787,14 @@
       }
     },
     {
-      "name": "Ruby - Method Definition Body",
-      "scope": [
-        "meta.function.method.with-arguments.ruby",
-        "meta.function.method.without-arguments.ruby"
-      ],
-      "settings": {}
-    },
-    {
       "name": "Ruby - Block Parameters",
       "scope": [
         "variable.other.block.ruby",
         "punctuation.separator.variable.ruby"
       ],
       "settings": {
-        "foreground": "#ff9500"
+        "foreground": "#ff9500",
+        "fontStyle": "italic"
       }
     },
     {
@@ -3093,7 +2831,15 @@
     {
       "name": "Ruby - Heredoc",
       "scope": [
-        "string.unquoted.heredoc.ruby",
+        "string.unquoted.heredoc.ruby"
+      ],
+      "settings": {
+        "foreground": "#00d084"
+      }
+    },
+    {
+      "name": "Ruby - String Delimiters",
+      "scope": [
         "punctuation.definition.string.begin.ruby",
         "punctuation.definition.string.end.ruby"
       ],
@@ -3154,7 +2900,9 @@
         "keyword.control.import.ts",
         "keyword.control.export.ts",
         "keyword.control.from.js",
-        "keyword.control.from.ts"
+        "keyword.control.from.ts",
+        "keyword.control.as.js",
+        "keyword.control.as.ts"
       ],
       "settings": {
         "foreground": "#ff006e"
@@ -3175,6 +2923,7 @@
       "scope": [
         "entity.name.tag.js",
         "entity.name.tag.tsx",
+        "entity.name.tag.jsx",
         "support.class.component.js",
         "support.class.component.tsx"
       ],
@@ -3207,10 +2956,13 @@
       "name": "JS/TS - Console",
       "scope": [
         "support.class.console.js",
-        "support.class.console.ts"
+        "support.class.console.ts",
+        "support.function.console.js",
+        "support.function.console.ts"
       ],
       "settings": {
-        "foreground": "#06ffc8"
+        "foreground": "#06ffc8",
+        "fontStyle": "bold"
       }
     },
     {

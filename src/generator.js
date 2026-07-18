@@ -38,33 +38,10 @@ function generateTheme() {
     // KEYWORDS AND CONTROL FLOW
     // ==========================================
     {
-      name: "Ruby Keywords (def, class, module)",
-      scope: [
-        "keyword.control.def.ruby",
-        "keyword.control.class.ruby",
-        "keyword.control.module.ruby",
-        "keyword.control.start-block.ruby"
-      ],
-      settings: {
-        foreground: palette.rosaMexicano
-      }
-    },
-    {
       name: "Ruby Control Keywords",
       scope: "keyword.control.ruby",
       settings: {
         foreground: palette.rosaMexicano
-      }
-    },
-    {
-      name: "Ruby Flow Keywords (if, else, return) - Italic",
-      scope: [
-        "keyword.control.conditional.ruby",
-        "keyword.control.loop.ruby"
-      ],
-      settings: {
-        foreground: palette.rosaMexicano,
-        fontStyle: "italic"
       }
     },
     {
@@ -94,32 +71,11 @@ function generateTheme() {
       }
     },
     {
-      name: "Ruby Class Names",
-      scope: "entity.name.type.class.ruby",
-      settings: {
-        foreground: palette.neonOrange
-      }
-    },
-    {
-      name: "Ruby Module Names",
-      scope: "entity.name.type.module.ruby",
-      settings: {
-        foreground: palette.neonOrange
-      }
-    },
-    {
       name: "Ruby Inherited Class - Italic",
       scope: "entity.other.inherited-class.ruby",
       settings: {
         foreground: palette.neonOrange,
         fontStyle: "italic"
-      }
-    },
-    {
-      name: "Ruby Support Classes",
-      scope: "support.class.ruby",
-      settings: {
-        foreground: palette.neonOrange
       }
     },
     {
@@ -141,122 +97,20 @@ function generateTheme() {
     // VARIABLES - SIGIL SYSTEM
     // ==========================================
     {
-      name: "Ruby Instance Variables (@var)",
-      scope: "variable.other.readwrite.instance.ruby",
-      settings: {
-        foreground: palette.neonYellow
-      }
-    },
-    {
-      name: "Ruby Class Variables (@@var)",
-      scope: "variable.other.readwrite.class.ruby",
-      settings: {
-        foreground: palette.deeperOrange
-      }
-    },
-    {
-      name: "Ruby Global Variables ($var) - Warning Color",
-      scope: [
-        "variable.other.readwrite.global.ruby",
-        "variable.other.readwrite.global.pre-defined.ruby"
-      ],
-      settings: {
-        foreground: palette.redWarning
-      }
-    },
-    {
-      name: "Ruby self/super - Italic Warning",
-      scope: [
-        "variable.language.self.ruby",
-        "variable.language.super.ruby"
-      ],
-      settings: {
-        foreground: palette.redEmphasis,
-        fontStyle: "italic"
-      }
-    },
-    {
       name: "Ruby __FILE__ and __LINE__",
       scope: "variable.language.ruby",
       settings: {
         foreground: palette.neonYellow
       }
     },
-    {
-      name: "Ruby Variable Sigils (@, @@, $)",
-      scope: "punctuation.definition.variable.ruby",
-      settings: {
-        foreground: palette.textSecondary
-      }
-    },
 
     // ==========================================
     // PARAMETERS
     // ==========================================
-    {
-      name: "Ruby Method Parameters - Italic",
-      scope: "variable.parameter.function.ruby",
-      settings: {
-        foreground: palette.neonYellow,
-        fontStyle: "italic"
-      }
-    },
-    {
-      name: "Ruby Block Parameters - Italic",
-      scope: "variable.other.block.ruby",
-      settings: {
-        foreground: palette.neonYellow,
-        fontStyle: "italic"
-      }
-    },
-    {
-      name: "Ruby Block Parameter Pipes (|x, y|)",
-      scope: "punctuation.separator.variable.ruby",
-      settings: {
-        foreground: palette.textMuted
-      }
-    },
 
     // ==========================================
     // CONSTANTS AND SYMBOLS
     // ==========================================
-    {
-      name: "Ruby Constants (CONSTANT)",
-      scope: "variable.other.constant.ruby",
-      settings: {
-        foreground: palette.amber
-      }
-    },
-    {
-      name: "Ruby Symbols (:symbol)",
-      scope: [
-        "constant.other.symbol.ruby",
-        "constant.language.symbol.ruby"
-      ],
-      settings: {
-        foreground: palette.neonBlue
-      }
-    },
-    {
-      name: "Ruby Hash Key Symbols (key: value)",
-      scope: [
-        "constant.other.symbol.hashkey.ruby",
-        "constant.other.symbol.hashkey.parameter.function.ruby"
-      ],
-      settings: {
-        foreground: palette.accentCyan
-      }
-    },
-    {
-      name: "Ruby nil, true, false",
-      scope: [
-        "constant.language.nil.ruby",
-        "constant.language.boolean.ruby"
-      ],
-      settings: {
-        foreground: palette.amber
-      }
-    },
     {
       name: "Ruby Numbers",
       scope: "constant.numeric.ruby",
@@ -278,26 +132,6 @@ function generateTheme() {
       ],
       settings: {
         foreground: palette.verdeMexicanoLight
-      }
-    },
-    {
-      name: "Ruby String Interpolation Delimiters (#{})",
-      scope: [
-        "punctuation.section.embedded.begin.ruby",
-        "punctuation.section.embedded.end.ruby"
-      ],
-      settings: {
-        foreground: palette.rosaMexicano
-      }
-    },
-    {
-      name: "Ruby Embedded Code in Interpolation",
-      scope: [
-        "meta.embedded.line.ruby",
-        "source.ruby.embedded.source"
-      ],
-      settings: {
-        foreground: palette.textPrimary
       }
     },
     {
@@ -380,13 +214,6 @@ function generateTheme() {
     {
       name: "Ruby Inheritance Separator (<)",
       scope: "punctuation.separator.inheritance.ruby",
-      settings: {
-        foreground: palette.textSecondary
-      }
-    },
-    {
-      name: "Ruby Method Call Separator (.)",
-      scope: "punctuation.separator.method.ruby",
       settings: {
         foreground: palette.textSecondary
       }
@@ -535,34 +362,14 @@ function generateTheme() {
     {
       name: "JS/TS Control Flow (italic)",
       scope: [
-        "keyword.control.flow.js",
-        "keyword.control.flow.ts",
         "keyword.control.return.js",
         "keyword.control.return.ts",
         "keyword.control.trycatch.js",
-        "keyword.control.trycatch.ts",
-        "storage.modifier.async.js",
-        "storage.modifier.async.ts"
+        "keyword.control.trycatch.ts"
       ],
       settings: {
         foreground: palette.rosaMexicano,
         fontStyle: "italic"
-      }
-    },
-    {
-      name: "JS/TS Import/Export",
-      scope: [
-        "keyword.control.import.js",
-        "keyword.control.import.ts",
-        "keyword.control.export.js",
-        "keyword.control.export.ts",
-        "keyword.control.from.js",
-        "keyword.control.from.ts",
-        "keyword.control.as.js",
-        "keyword.control.as.ts"
-      ],
-      settings: {
-        foreground: palette.neonPurple
       }
     },
 
@@ -573,9 +380,7 @@ function generateTheme() {
       name: "JS/TS Function Definitions",
       scope: [
         "entity.name.function.js",
-        "entity.name.function.ts",
-        "entity.name.method.js",
-        "entity.name.method.ts"
+        "entity.name.function.ts"
       ],
       settings: {
         foreground: palette.neonBlue
@@ -591,19 +396,6 @@ function generateTheme() {
       ],
       settings: {
         foreground: palette.neonBlue
-      }
-    },
-    {
-      name: "JS/TS Console",
-      scope: [
-        "support.function.console.js",
-        "support.function.console.ts",
-        "support.class.console.js",
-        "support.class.console.ts"
-      ],
-      settings: {
-        foreground: palette.neonYellow,
-        fontStyle: "bold"
       }
     },
 
@@ -623,20 +415,8 @@ function generateTheme() {
       }
     },
     {
-      name: "TypeScript Interface Names",
-      scope: [
-        "entity.name.type.interface.ts",
-        "entity.name.type.interface.tsx"
-      ],
-      settings: {
-        foreground: palette.neonOrange
-      }
-    },
-    {
       name: "TypeScript Type Names",
       scope: [
-        "entity.name.type.ts",
-        "entity.name.type.tsx",
         "entity.name.type.alias.ts",
         "entity.name.type.alias.tsx"
       ],
@@ -790,9 +570,7 @@ function generateTheme() {
       name: "JS/TS Object Properties",
       scope: [
         "variable.other.property.js",
-        "variable.other.property.ts",
-        "meta.object-literal.key.js",
-        "meta.object-literal.key.ts"
+        "variable.other.property.ts"
       ],
       settings: {
         foreground: palette.neonOrange  // Orange is easier on the eyes
@@ -849,20 +627,6 @@ function generateTheme() {
     // TYPESCRIPT TYPE ANNOTATIONS
     // ==========================================
     {
-      name: "TypeScript Type Annotations",
-      scope: [
-        "meta.type.annotation.ts",
-        "meta.type.annotation.tsx",
-        "support.type.primitive.ts",
-        "support.type.primitive.tsx",
-        "keyword.operator.type.annotation.ts",
-        "keyword.operator.type.annotation.tsx"
-      ],
-      settings: {
-        foreground: palette.neonBlue
-      }
-    },
-    {
       name: "TypeScript Optional Chaining & Nullish Coalescing",
       scope: [
         "keyword.operator.optional.ts",
@@ -892,19 +656,6 @@ function generateTheme() {
     // ==========================================
     // JSX/TSX
     // ==========================================
-    {
-      name: "JSX/TSX Tags",
-      scope: [
-        "entity.name.tag.js",
-        "entity.name.tag.jsx",
-        "entity.name.tag.tsx",
-        "support.class.component.js",
-        "support.class.component.tsx"
-      ],
-      settings: {
-        foreground: palette.deeperOrange
-      }
-    },
     {
       name: "JSX/TSX Attributes",
       scope: [
