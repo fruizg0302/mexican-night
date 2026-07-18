@@ -741,6 +741,7 @@ Fixes: .vsix ships src/, samples/, docs/, images/, CLAUDE.md, and the untracked 
 .vscode/**
 .vscode-test/**
 .claude/**
+.superpowers/**
 .github/**
 .gitignore
 .gitattributes
@@ -752,7 +753,7 @@ scripts/**
 CLAUDE.md
 package-lock.json
 ```
-(No `icon.svg` line — that file no longer exists in this checkout, it was deleted upstream.)
+(No `icon.svg` line — that file no longer exists in this checkout, it was deleted upstream. **Correction found during execution:** the list originally omitted `.superpowers/**` — a directory this plan's own execution tooling created (task briefs, reports, review diffs, the progress ledger) that is gitignored but, being untracked working-tree content, is not excluded from `vsce package` unless `.vscodeignore` says so too — `vsce` does not consult `.gitignore`. Without this line, `npx vsce ls` ships ~29 internal planning files. Added above.)
 
 - [ ] **Step 2: Delete leftovers**
 
