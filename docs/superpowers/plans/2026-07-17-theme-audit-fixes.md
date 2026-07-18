@@ -330,6 +330,8 @@ Also delete these two (same table format):
 | 19 | `Ruby Embedded Code in Interpolation` | 293-302 | both scopes covered: `meta.embedded.line.ruby` by "Ruby - Interpolated Code", `source.ruby.embedded.source` prefix-matched by "Ruby - String Interpolation" (`source.ruby.embedded`) |
 | 20 | `Ruby Method Call Separator (.)` | 387-393 | "Ruby - Punctuation and Operators" (accentCyan) |
 
+**Correction found during execution:** the table above missed one rule — `Ruby Regular Expressions` (scope `string.regexp.ruby`, `string.regexp.interpolated.ruby`, `foreground: palette.accentTeal`) is also fully redundant with syntax.js's "Ruby - Regex" rule. It didn't show up in the original audit's conflict count because both rules resolve to the identical color (`accentTeal`), so `check-theme.mjs` — which only flags scopes with *differing* settings — never flagged it; it's dead code by the same "syntax.js owns every scope it defines" policy, just coincidentally harmless. Delete it too, as rule 21 of this table.
+
 - [ ] **Step 2: Delete these 5 fully-dead rules from the `javascriptScopes` array:**
 
 | name | pre-edit lines | why dead |
