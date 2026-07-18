@@ -453,16 +453,6 @@
       }
     },
     {
-      "name": "Ruby Regular Expressions",
-      "scope": [
-        "string.regexp.ruby",
-        "string.regexp.interpolated.ruby"
-      ],
-      "settings": {
-        "foreground": "#06ffc8"
-      }
-    },
-    {
       "name": "Ruby Backtick Commands",
       "scope": "string.interpolated.ruby",
       "settings": {

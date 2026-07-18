@@ -142,16 +142,6 @@ function generateTheme() {
       }
     },
     {
-      name: "Ruby Regular Expressions",
-      scope: [
-        "string.regexp.ruby",
-        "string.regexp.interpolated.ruby"
-      ],
-      settings: {
-        foreground: palette.accentTeal
-      }
-    },
-    {
       name: "Ruby Backtick Commands",
       scope: "string.interpolated.ruby",
       settings: {
