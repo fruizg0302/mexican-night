@@ -2510,6 +2510,15 @@
       }
     },
     {
+      "name": "Ruby - Embedded Source Text",
+      "scope": [
+        "source.ruby.embedded.source"
+      ],
+      "settings": {
+        "foreground": "#c0caf5"
+      }
+    },
+    {
       "name": "Ruby - Module/Class/Method Keywords",
       "scope": [
         "keyword.control.module.ruby",

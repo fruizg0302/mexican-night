@@ -844,6 +844,13 @@ function getTokenColors(palette) {
       },
     },
     {
+      name: "Ruby - Embedded Source Text",
+      scope: ["source.ruby.embedded.source"],
+      settings: {
+        foreground: palette.textPrimary,
+      },
+    },
+    {
       name: "Ruby - Module/Class/Method Keywords",
       scope: [
         "keyword.control.module.ruby",
