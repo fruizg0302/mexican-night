@@ -11,15 +11,7 @@ export const palette = {
   // ==========================================
   // GRAYS (Tokyo Night - keeping these)
   // ==========================================
-  gray100: "#a9b1d6",
-  gray200: "#9aa5ce",
-  gray300: "#828bb8",
-  gray400: "#565f89",
   gray500: "#414868",
-  gray600: "#32344a",
-  gray700: "#24283b",
-  gray800: "#1f2335",
-  gray900: "#1a1b26",
   gray: "#828bb8",               // Helper alias for scrollbar, etc.
 
   // ==========================================
@@ -37,9 +29,7 @@ export const palette = {
   neonOrange: "#ff9500",         // Cempasúchil orange (classes/modules) - Updated
   neonPurple: "#BB9AF7",         // Mexican baroque purple
   neonBlue: "#06ffc8",           // Turquoise (methods, symbols) - Updated
-  deeperOrange: "#fb8500",       // Deeper orange (class variables) - New
   amber: "#ffba08",              // Amber (constants, numbers) - New
-  gold: "#fbbf24",               // Distinct gold - New
   electricBlue: "#7aa2f7",       // ANSI blue (night-sky electric blue)
   electricBlueBright: "#9ecbff", // ANSI bright blue
   whiteBright: "#ffffff",        // ANSI bright white
@@ -48,10 +38,6 @@ export const palette = {
   // EARTHY & ACCENT TONES
   // ==========================================
   tierraBrown: "#8b7355",        // Tierra/clay (comments) - New
-  clayBrown: "#8b4513",          // Clay brown (muted elements) - New
-  darkNavy: "#1e3a8a",           // Dark navy (background accents) - New
-  redWarning: "#dc2f02",         // Red warning (global variables) - New
-  redEmphasis: "#d00000",        // Red emphasis (self/super) - New
 
   // ==========================================
   // NIGHT SKY BACKGROUNDS
@@ -82,62 +68,12 @@ export const palette = {
   error: "#f7768e",
   warning: "#e0af68",
   info: "#06ffc8",               // Turquoise (updated)
-  success: "#00d084",            // Bright green (updated)
 
   // ==========================================
   // VIBRANT COLORS - UPDATED FOR MEXICAN THEME
   // ==========================================
-  red: "#f7768e",
   redBright: "#ff5370",
-  orange: "#ff9e64",
-  orangeBright: "#ffb86c",
-  yellow: "#e0af68",
   yellowBright: "#f1fa8c",
-  green: "#9ece6a",
   greenBright: "#50fa7b",
-
-  // UPDATED: Cyan now maps to Mexican pink
-  cyan: "#FF69B4",               // Mexican pink (was #7dcfff)
-  cyanBright: "#FF9EFF",         // Bright pink (was #8be9fd)
-
-  // UPDATED: Blue now maps to turquoise
-  blue: "#06ffc8",               // Turquoise (updated)
   blueBright: "#7FFFD4",         // Aquamarine (was #82aaff)
-
-  purple: "#bb9af7",
-  purpleBright: "#c792ea",
-  magenta: "#ff79c6",
-  magentaBright: "#ff6ac1",
-
-  // ==========================================
-  // LEGACY COLORS (For Compatibility)
-  // ==========================================
-  accent: "#ff006e",             // Changed to rosaMexicano (updated)
-  bg: "#1E1E2E",                 // Changed to nightSkyLight
-  bgDark: "#16161E",             // Changed to nightSky
-  bgHighlight: "#2D2D3D",        // Changed to nightSkyMedium
-  bgSelection: "#3B3B52",        // Changed to nightSkyBright
-  bgSearch: "#ff006e40",         // Rosa mexicano with transparency (updated)
-  border: "#2D2D3D",             // Changed to nightSkyMedium
-  borderHighlight: "#565f89",    // Keep gray400
-
-  // ==========================================
-  // TERMINAL COLORS - UPDATED FOR MEXICAN THEME
-  // ==========================================
-  terminalBlack: "#16161E",      // nightSky
-  terminalRed: "#f7768e",
-  terminalGreen: "#00d084",      // verdeMexicanoLight (updated)
-  terminalYellow: "#ffd60a",     // neonYellow (updated)
-  terminalBlue: "#06ffc8",       // Turquoise (updated)
-  terminalMagenta: "#ff006e",    // rosaMexicano (updated)
-  terminalCyan: "#FF69B4",       // Mexican pink (was cyan)
-  terminalWhite: "#c0caf5",
-  terminalBrightBlack: "#565f89",
-  terminalBrightRed: "#ff5370",
-  terminalBrightGreen: "#00d084",
-  terminalBrightYellow: "#ffd60a",
-  terminalBrightBlue: "#06ffc8", // Turquoise (updated)
-  terminalBrightMagenta: "#FF69B4",
-  terminalBrightCyan: "#FF9EFF",
-  terminalBrightWhite: "#c0caf5",
 };

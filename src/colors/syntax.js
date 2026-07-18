@@ -1,8 +1,6 @@
 // Syntax Highlighting Colors for Mexican Night Theme
 // Maps palette colors to programming language tokens
 
-import { palette } from './palette.js';
-
 function getSemanticTokenColors(palette) {
   return {
     // Parameters
@@ -113,123 +111,6 @@ function getSemanticTokenColors(palette) {
     },
   };
 }
-
-export const syntaxColors = {
-  // Mexican Night color mappings for syntax highlighting
-
-  // Comments
-  comment: palette.tierraBrown,           // Tierra brown - earthy, subtle
-  commentDoc: palette.tierraBrown,
-
-  // Keywords & Control Flow
-  keyword: palette.rosaMexicano,          // Rosa mexicana - vibrant
-  keywordControl: palette.rosaMexicano,
-  keywordOperator: palette.neonBlue,      // Turquoise
-
-  // Functions & Methods
-  function: palette.neonBlue,             // Turquoise - Mexican jewelry
-  functionCall: palette.neonBlue,
-  method: palette.neonBlue,
-  methodCall: palette.neonBlue,
-
-  // Variables & Parameters
-  variable: palette.textPrimary,          // Use default text for local variables
-  variableProperty: palette.neonOrange,   // Orange for properties (easier on eyes)
-  parameter: palette.neonYellow,
-
-  // Constants & Literals
-  constant: palette.amber,                // Amber - constants/numbers
-  constantBuiltin: palette.amber,
-  constantLanguage: palette.amber,
-
-  // Strings & Regular Expressions
-  string: palette.verdeMexicanoLight,     // Verde bandera
-  stringRegexp: palette.neonPurple,       // Bougainvillea purple
-  stringEscape: palette.rosaMexicano,
-  stringInterpolation: palette.rosaMexicano,
-
-  // Numbers & Booleans
-  number: palette.amber,
-  boolean: palette.amber,
-
-  // Types & Classes
-  type: palette.neonBlue,                 // Turquoise
-  typeBuiltin: palette.neonBlue,
-  class: palette.neonOrange,              // Cempasúchil orange
-  className: palette.neonOrange,
-
-  // Support & Library
-  support: palette.neonBlue,              // Turquoise
-  supportFunction: palette.neonBlue,
-  supportMethod: palette.neonBlue,
-  supportClass: palette.neonOrange,
-  supportType: palette.neonBlue,
-  supportConstant: palette.amber,
-  supportVariable: palette.neonOrange,    // Orange for built-in objects (document, window)
-
-  // Punctuation & Operators
-  punctuation: palette.gray600,
-  punctuationDefinition: palette.gray600,
-  punctuationSection: palette.textPrimary,
-  punctuationTerminator: palette.gray600,
-  operator: palette.neonBlue,             // Turquoise
-
-  // Tags (HTML/JSX)
-  tag: palette.deeperOrange,              // Deeper orange for JSX
-  tagAttribute: palette.neonYellow,
-  tagPunctuation: palette.gray600,
-
-  // Invalid & Deprecated
-  invalid: palette.error,
-  invalidDeprecated: palette.gray500,
-
-  // Ruby-specific (already updated in rubyScopes)
-  rubySymbol: palette.neonBlue,
-  rubyInstanceVariable: palette.neonYellow,
-  rubyClassVariable: palette.deeperOrange,
-  rubyGlobalVariable: palette.redWarning,
-  rubyPseudoVariable: palette.redEmphasis,
-  rubyHeredoc: palette.verdeMexicanoLight,
-  rubyInterpolation: palette.rosaMexicano,
-  rubyRegexp: palette.accentTeal,
-
-  // JavaScript-specific (Mexican Night mapping)
-  jsThis: palette.redEmphasis,            // Red emphasis
-  jsSuper: palette.redEmphasis,
-  jsNull: palette.amber,
-  jsUndefined: palette.amber,
-  jsNan: palette.amber,
-  jsPrototype: palette.neonBlue,
-  jsConstructor: palette.neonBlue,
-  jsDecorator: palette.rosaMexicano,      // Rosa mexicana
-  jsxComponent: palette.deeperOrange,     // Deeper orange
-  jsxAttribute: palette.neonYellow,       // Marigold yellow
-  jsArrowFunction: palette.rosaMexicano,
-  jsTemplateLiteral: palette.verdeMexicanoLight,
-  jsTemplateExpression: palette.rosaMexicano,
-  jsImport: palette.neonPurple,           // Bougainvillea purple
-  jsExport: palette.neonPurple,
-  jsAsync: palette.neonPurple,
-  jsAwait: palette.neonPurple,
-
-  // Storage modifiers
-  storageType: palette.rosaMexicano,
-  storageModifier: palette.rosaMexicano,
-
-  // Entity names
-  entityName: palette.neonOrange,
-  entityNameFunction: palette.neonBlue,
-  entityNameType: palette.neonOrange,
-  entityNameTag: palette.deeperOrange,
-  entityNameSection: palette.neonBlue,
-  entityOther: palette.neonOrange,        // Orange for other entities
-
-  // Meta
-  metaClass: palette.neonOrange,
-  metaFunction: palette.neonBlue,
-  metaSelector: palette.neonPurple,
-  metaProperty: palette.neonBlue,
-};
 
 function getTokenColors(palette) {
   return [

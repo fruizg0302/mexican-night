@@ -8,7 +8,7 @@ import { dirname } from 'path';
 import { palette } from './colors/palette.js';
 import { baseTheme } from './templates/base-theme.js';
 import { getUIColors } from './colors/ui.js';
-import { syntaxColors, getSemanticTokenColors, getTokenColors } from './colors/syntax.js';
+import { getSemanticTokenColors, getTokenColors } from './colors/syntax.js';
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
