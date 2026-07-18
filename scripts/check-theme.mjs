@@ -18,11 +18,14 @@ const srcFiles = [
 const referenced = new Set();
 for (const f of srcFiles) {
   const text = fs.readFileSync(path.join(root, f), 'utf8');
-  for (const m of text.matchAll(/palette\.([A-Za-z0-9_]+)/g)) {
-    referenced.add(m[1]);
-    if (!(m[1] in palette)) {
-      console.error(`FAIL: ${f} references undefined palette key "${m[1]}"`);
-      failed = true;
+  const codeLines = text.split('\n').filter((line) => !line.trim().startsWith('import '));
+  for (const line of codeLines) {
+    for (const m of line.matchAll(/palette\.([A-Za-z0-9_]+)/g)) {
+      referenced.add(m[1]);
+      if (!(m[1] in palette)) {
+        console.error(`FAIL: ${f} references undefined palette key "${m[1]}"`);
+        failed = true;
+      }
     }
   }
 }
