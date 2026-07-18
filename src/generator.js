@@ -524,7 +524,7 @@ function generateTheme() {
         "variable.language.arguments.ts"
       ],
       settings: {
-        foreground: palette.redEmphasis,
+        foreground: palette.error,
         fontStyle: "italic"
       }
     },
@@ -1123,7 +1123,7 @@ function generateTheme() {
       name: "Java this keyword - Italic",
       scope: "variable.language.this.java",
       settings: {
-        foreground: palette.redEmphasis,
+        foreground: palette.error,
         fontStyle: "italic"
       }
     },
@@ -1422,7 +1422,7 @@ function generateTheme() {
         "variable.parameter.function.language.special.cls.python"
       ],
       settings: {
-        foreground: palette.redEmphasis,
+        foreground: palette.error,
         fontStyle: "italic"
       }
     },
