@@ -136,11 +136,14 @@ const srcFiles = [
 const referenced = new Set();
 for (const f of srcFiles) {
   const text = fs.readFileSync(path.join(root, f), 'utf8');
-  for (const m of text.matchAll(/palette\.([A-Za-z0-9_]+)/g)) {
-    referenced.add(m[1]);
-    if (!(m[1] in palette)) {
-      console.error(`FAIL: ${f} references undefined palette key "${m[1]}"`);
-      failed = true;
+  const codeLines = text.split('\n').filter((line) => !line.trim().startsWith('import '));
+  for (const line of codeLines) {
+    for (const m of line.matchAll(/palette\.([A-Za-z0-9_]+)/g)) {
+      referenced.add(m[1]);
+      if (!(m[1] in palette)) {
+        console.error(`FAIL: ${f} references undefined palette key "${m[1]}"`);
+        failed = true;
+      }
     }
   }
 }
@@ -173,7 +176,9 @@ console.log('theme checks passed');
 - [ ] **Step 2: Run it to verify it fails (that's expected right now)**
 
 Run: `npm run check`
-Expected: ~61 `FAIL: scope …` lines (e.g. `constant.other.symbol.ruby`, `keyword.control.import.js`), many `warn: unused palette key` lines, exit code 1. If it PASSES now, something is wrong — stop and investigate.
+Expected: 64 `FAIL: scope …` lines (e.g. `constant.other.symbol.ruby`, `keyword.control.import.js`), many `warn: unused palette key` lines, exit code 1. (64, not 61: this checker counts every pairwise transition where a scope's Nth definition differs from its (N-1)th — a scope with 3 conflicting definitions produces 2 FAIL lines. Three scopes here have 3 definitions each, so 61 distinct conflicting scopes → 64 transition-FAILs. Both numbers describe the same underlying set of conflicts; 64 is what this exact script prints.) If it PASSES now, something is wrong — stop and investigate.
+
+**Note on the `codeLines` filter:** without it, the regex also matches the literal text `palette.js` inside each file's own `import { palette } from './colors/palette.js'` line, misreading "js" as an undefined property access. Filtering out lines starting with `import ` avoids this false positive; do not simplify it back to a plain `text.matchAll(...)` over the whole file.
 
 - [ ] **Step 3: Commit**
 
