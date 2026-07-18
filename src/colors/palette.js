@@ -40,6 +40,9 @@ export const palette = {
   deeperOrange: "#fb8500",       // Deeper orange (class variables) - New
   amber: "#ffba08",              // Amber (constants, numbers) - New
   gold: "#fbbf24",               // Distinct gold - New
+  electricBlue: "#7aa2f7",       // ANSI blue (night-sky electric blue)
+  electricBlueBright: "#9ecbff", // ANSI bright blue
+  whiteBright: "#ffffff",        // ANSI bright white
 
   // ==========================================
   // EARTHY & ACCENT TONES

@@ -3,10 +3,6 @@
 
 function getUIColors(palette) {
   return {
-    // Contrast colors
-    "contrastActiveBorder": palette.rosaMexicano,
-    "contrastBorder": "#16161e",
-    
     // Base colors
     "focusBorder": palette.rosaMexicano,
     "foreground": palette.textSecondary,
@@ -114,6 +110,8 @@ function getUIColors(palette) {
     "editor.rangeHighlightBackground": palette.rosaMexicano + "15",
     "editorIndentGuide.background": palette.nightSkyMedium,
     "editorIndentGuide.activeBackground": palette.textDark,
+    "editorIndentGuide.background1": palette.nightSkyMedium,
+    "editorIndentGuide.activeBackground1": palette.textDark,
     "editorWhitespace.foreground": palette.textDark,
     "editorRuler.foreground": palette.nightSkyMedium,
     "editorCodeLens.foreground": palette.textMuted,
@@ -217,27 +215,27 @@ function getUIColors(palette) {
     "terminal.background": palette.nightSky,
     "terminal.foreground": palette.textPrimary,
     "terminal.ansiBlack": palette.nightSky,
-    "terminal.ansiBlue": palette.info,
-    "terminal.ansiCyan": palette.accentCyan,
-    "terminal.ansiGreen": palette.verdeMexicano,
-    "terminal.ansiMagenta": palette.rosaMexicano,
     "terminal.ansiRed": palette.error,
-    "terminal.ansiWhite": palette.textPrimary,
+    "terminal.ansiGreen": palette.verdeMexicanoLight,
     "terminal.ansiYellow": palette.neonYellow,
+    "terminal.ansiBlue": palette.electricBlue,
+    "terminal.ansiMagenta": palette.rosaMexicano,
+    "terminal.ansiCyan": palette.accentTeal,
+    "terminal.ansiWhite": palette.textPrimary,
     "terminal.ansiBrightBlack": palette.textDark,
-    "terminal.ansiBrightBlue": palette.neonBlue,
-    "terminal.ansiBrightCyan": palette.accentCyan,
-    "terminal.ansiBrightGreen": palette.verdeMexicanoLight,
+    "terminal.ansiBrightRed": palette.redBright,
+    "terminal.ansiBrightGreen": palette.greenBright,
+    "terminal.ansiBrightYellow": palette.yellowBright,
+    "terminal.ansiBrightBlue": palette.electricBlueBright,
     "terminal.ansiBrightMagenta": palette.rosaMexicanoLight,
-    "terminal.ansiBrightRed": palette.error,
-    "terminal.ansiBrightWhite": palette.white,
-    "terminal.ansiBrightYellow": palette.neonYellow,
+    "terminal.ansiBrightCyan": palette.blueBright,
+    "terminal.ansiBrightWhite": palette.whiteBright,
     "terminal.selectionBackground": palette.rosaMexicano + "30",
     "terminalCursor.background": palette.nightSkyLight,
     "terminalCursor.foreground": palette.rosaMexicano,
     
     // Git colors
-    "gitDecoration.addedResourceForeground": palette.verdeMexicano,
+    "gitDecoration.addedResourceForeground": palette.verdeMexicanoLight,
     "gitDecoration.modifiedResourceForeground": palette.neonBlue,
     "gitDecoration.deletedResourceForeground": palette.error,
     "gitDecoration.untrackedResourceForeground": palette.verdeMexicanoLight,
@@ -281,8 +279,8 @@ function getUIColors(palette) {
     
     // Welcome page
     "welcomePage.background": palette.nightSkyLight,
-    "welcomePage.buttonBackground": palette.nightSkyMedium,
-    "welcomePage.buttonHoverBackground": palette.nightSkyBright,
+    "welcomePage.tileBackground": palette.nightSkyMedium,
+    "welcomePage.tileHoverBackground": palette.nightSkyBright,
     
     // Settings
     "settings.headerForeground": palette.textPrimary,
