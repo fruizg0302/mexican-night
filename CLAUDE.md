@@ -40,8 +40,7 @@ src/
   │   ├── ui.js           # VS Code UI element colors (function: getUIColors)
   │   └── syntax.js       # Syntax highlighting rules (functions: getTokenColors, getSemanticTokenColors)
   ├── templates/
-  │   ├── base-theme.js   # Theme metadata and structure skeleton
-  │   └── tokyo-night-reference.json  # Reference theme structure
+  │   └── base-theme.js   # Theme metadata and structure skeleton
   └── generator.js        # Main build script that combines everything
 
 themes/                  # Generated theme files (do not edit directly)
@@ -53,7 +52,6 @@ samples/                # Test files for verifying syntax highlighting
 **`src/colors/palette.js`**
 - Core color palette definitions
 - Exports: `palette` object with all theme colors
-- Uses ES6 export syntax but also CommonJS module.exports
 - Defines Mexican theme colors (rosaMexicano, verdeMexicano, neonYellow, neonBlue, etc.)
 - Background colors (nightSky variants), text colors, terminal colors
 
@@ -79,8 +77,7 @@ samples/                # Test files for verifying syntax highlighting
 
 **`src/templates/base-theme.js`**
 - Theme metadata skeleton (name, author, type, semanticClass)
-- Reference lists of semantic token and token color categories
-- Not actually used by generator currently (generator defines inline)
+- Spread into the theme by generator.js (supplies name/author/type/semanticClass/semanticHighlighting)
 
 ### Color Palette
 
@@ -106,7 +103,7 @@ The theme references these color variables from palette.js:
 **Ruby Enhancements**
 - Symbols: Verde Mexicano
 - String interpolation: Rosa Mexicano
-- Instance variables: Cyan
+- Instance variables: Mexican Pink (#FF69B4)
 - Class variables: Magenta
 - Control flow keywords (if/unless/case/when): Rosa Mexicano
 - Exception handling (begin/rescue/ensure): Neon Purple
@@ -120,7 +117,7 @@ The theme references these color variables from palette.js:
 - Arrow functions: Rosa Mexicano
 - JSX tags: Rosa Mexicano Light
 - JSX attributes: Neon Yellow (italic)
-- Object keys: Cyan
+- Object keys: Mexican Pink (#FF69B4)
 
 ## Development Workflow
 
@@ -130,14 +127,15 @@ The theme references these color variables from palette.js:
 4. Changes auto-reload in Extension Host (no restart needed)
 5. Use sample files in `samples/` to verify syntax highlighting
 6. Inspect tokens with `Developer: Inspect Editor Tokens and Scopes` to debug scopes
+7. Run npm run check — every TextMate scope must be defined by exactly one rule (CI enforces this)
 
 **See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for detailed development guide.**
 
 ## Important Notes
 
-- **Publisher name**: Set to "wowzontle" in package.json
+- **Publisher name**: Set to "mercuryatlas" in package.json
 - **Repository URL**: https://github.com/fruizg0302/mexican-night
-- **Theme icon**: No icon defined - add "icon" field to package.json if desired
+- **Theme icon**: icon.png (128x128)
 - **Color transparency**: Use hex with alpha suffix (e.g., "#ff006e30" for 30% opacity)
 - **Scope specificity**: More specific scopes override general ones (TextMate rule)
 - **Font styles**: Options are "italic", "bold", "italic bold", "underline"

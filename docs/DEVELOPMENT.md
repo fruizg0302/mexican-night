@@ -20,7 +20,7 @@ Guide for developing and testing the Mexican Night VS Code theme.
 vsce package
 
 # Install in your VS Code
-code --install-extension mexican-night-0.0.1.vsix
+code --install-extension mexican-night-x.x.x.vsix
 
 # Activate: Cmd+K Cmd+T → "Mexican Night"
 ```
@@ -51,8 +51,7 @@ mexican-night/
 │   │   ├── ui.js                # VS Code UI colors
 │   │   └── syntax.js            # Syntax highlighting rules
 │   ├── templates/
-│   │   ├── base-theme.js        # Theme metadata
-│   │   └── tokyo-night-reference.json
+│   │   └── base-theme.js        # Theme metadata
 │   └── generator.js             # Build script
 │
 ├── themes/                       # Generated files (DO NOT EDIT)
@@ -61,12 +60,21 @@ mexican-night/
 ├── samples/                      # Test files for different languages
 │   ├── test.js
 │   ├── test.ts
+│   ├── test.py
 │   ├── test.rb
-│   └── test_ruby_enhanced.rb
+│   ├── showcase.py
+│   └── showcase.tsx
 │
 ├── docs/                         # Documentation
+│   ├── CONFIGURATION.md         # Configuration guide
 │   ├── DEVELOPMENT.md           # This file
 │   └── PUBLISHING.md            # Publishing guide
+│
+├── scripts/
+│   └── check-theme.mjs          # Scope-conflict check (used by CI)
+│
+├── .github/workflows/
+│   └── build-check.yml          # CI: build-freshness and scope-conflict checks
 │
 └── package.json                 # Extension manifest
 ```
@@ -81,9 +89,9 @@ Example:
 ```javascript
 export const palette = {
   // Mexican Colors
-  rosaMexicano: "#E4007C",
+  rosaMexicano: "#ff006e",
   verdeMexicano: "#006341",
-  neonYellow: "#FFD700",
+  neonYellow: "#ffd60a",
 
   // Add new colors here
   customColor: "#ABCDEF",
@@ -171,9 +179,9 @@ VS Code uses TextMate grammar for syntax highlighting. Each token has one or mor
 ## Color Transparency
 
 VS Code supports hex colors with alpha transparency:
-- `#E4007C` - Solid color
-- `#E4007C30` - 30% opacity (hex: 30 ≈ 19% in decimal, use online converter)
-- `#E4007C88` - ~50% opacity
+- `#ff006e` - Solid color
+- `#ff006e30` - 30% opacity (hex: 30 ≈ 19% in decimal, use online converter)
+- `#ff006e88` - ~50% opacity
 
 Common opacity values:
 - `10` = ~6%
@@ -279,9 +287,9 @@ git push
 ## Current Configuration
 
 - **GitHub**: https://github.com/fruizg0302/mexican-night
-- **Publisher**: wowzontle
+- **Publisher**: mercuryatlas
 - **Theme Name**: Mexican Night
-- **Version**: 0.0.1 (update before publishing to marketplace)
+- **Version**: 1.2.0
 
 ## Next Steps
 

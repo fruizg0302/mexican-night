@@ -2,7 +2,27 @@
 
 All notable changes to the Mexican Night theme extension.
 
-## [1.1.0] - 2024-12-27
+## [1.2.0] - 2026-07-17
+
+### Fixed
+- Semantic highlighting now actually enabled (`semanticHighlighting: true`) — it was advertised but inert
+- Every TextMate scope now has a single owning rule; removed 25+ dead rules that were silently overridden (Ruby/JS/Python; Java/Elixir were checked and had none)
+- Ruby symbols render Verde Mexicano again (an unrelated rule had overridden them to yellow)
+- Ruby sigils (`@`, `@@`, `$`) now match their variable's color instead of all rendering orange-bold
+- Ruby regex delimiters match the regex body (teal) instead of string green
+- Readable contrast for `this`/`super`/`arguments` (JS/TS), `self`/`cls` (Python), and `this` (Java) — was #d00000 at ~2.9:1
+- Terminal: readable green, real cyan and blue, all bright variants distinct; readable git "added" color
+- Removed high-contrast-only `contrastActiveBorder`/`contrastBorder` (stray pink outlines on focused UI)
+- Replaced removed/deprecated workbench color keys (welcomePage buttons, indent guides)
+
+### Changed
+- The .vsix now ships only runtime files (theme JSON, icon, README, CHANGELOG, LICENSE) — screenshots load from GitHub
+- Optimized screenshots (1.5 MB → ~440 KB, visually lossless)
+- Removed dead code: unused `syntaxColors` export, Tokyo Night reference JSON, ~50 unused palette keys
+- Added CI: build-freshness and scope-conflict checks
+- Updated package.json description and keywords to include Java and Elixir
+
+## [1.1.0] - 2025-12-27
 
 ### Added
 - ☕ **Java Support** - Comprehensive Java syntax highlighting
@@ -30,7 +50,7 @@ All notable changes to the Mexican Night theme extension.
 - 🏷️ Updated publisher name from "wowzontle" to "mercuryatlas"
 - 🖼️ Converted theme icon from SVG to PNG format
 
-## [1.0.0] - 2024-12-17
+## [1.0.0] - 2025-12-17
 
 ### Added
 - 🎨 Theme icon featuring "MN" monogram with Rosa Mexicano and Verde Mexicano colors
@@ -47,7 +67,7 @@ All notable changes to the Mexican Night theme extension.
 - 📂 Moved detailed customization and language support docs to CONFIGURATION.md
 - 📦 Ready for VS Code Marketplace publication
 
-## [0.0.1] - 2024-12-16
+## [0.0.1] - 2025-12-16
 
 ### Added
 - 🎨 Initial release of Mexican Night theme
@@ -73,7 +93,7 @@ All notable changes to the Mexican Night theme extension.
 
 ### Color Palette
 - Rosa Mexicano (#ff006e) - Keywords and primary accents
-- Verde Mexicano (#00d084) - Strings and success states
+- Verde Mexicano Light (#00d084) - Strings and success states
 - Cempasúchil Orange (#ff9500) - Classes and types
 - Turquoise (#06ffc8) - Functions and methods
 - Marigold Yellow (#ffd60a) - Parameters

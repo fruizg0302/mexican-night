@@ -18,7 +18,7 @@ A vibrant VS Code theme that celebrates the lights of Mexico City at night, feat
 Mexican Night uses authentic Mexican-inspired colors:
 
 - **Rosa Mexicano** (#ff006e) - Keywords, control flow, and primary accents
-- **Verde Mexicano** (#00d084) - Strings, success states, and secondary accents
+- **Verde Mexicano Light** (#00d084) - Strings, success states, and secondary accents
 - **Cempasúchil Orange** (#ff9500) - Classes, types, and built-in objects
 - **Turquoise** (#06ffc8) - Functions, methods, and operators
 - **Marigold Yellow** (#ffd60a) - Parameters and special variables
@@ -67,6 +67,7 @@ Mexican Night uses authentic Mexican-inspired colors:
 
 - **[Configuration & Customization](docs/CONFIGURATION.md)** - Detailed setup, rainbow brackets, language support
 - **[Development Guide](docs/DEVELOPMENT.md)** - Build and modify the theme
+- **[Publishing Guide](docs/PUBLISHING.md)** - Publish to VS Code Marketplace
 
 ## 🤝 Contributing
 

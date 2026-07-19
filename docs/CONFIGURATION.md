@@ -16,7 +16,7 @@ Add this to your `settings.json`:
 ```
 
 This will colorize your brackets using the theme's Mexican colors:
-- Rosa Mexicano (pink) → Verde Mexicano (green) → Neon Blue → Neon Yellow → Magenta → Cyan
+- Rosa Mexicano (pink) → Verde Mexicano (green) → Neon Blue → Neon Yellow → Magenta → Mexican Pink
 
 ## 🔧 Customization
 
@@ -40,7 +40,7 @@ You can customize the theme colors in your `settings.json`:
 ```json
 "editor.tokenColorCustomizations": {
   "[Mexican Night]": {
-    "keywords": "#E4007C",
+    "keywords": "#ff006e",
     "strings": "#00D084",
     "comments": "#8B7355"
   }
@@ -86,7 +86,7 @@ Mexican Night provides exceptional syntax highlighting for Python, Ruby, and Jav
 
 **Special Elements**
 - Parameters - Marigold Yellow (italic)
-- `self` and `cls` - Red Emphasis (italic)
+- `self` and `cls` - Coral Red #f7768e (italic)
 - Decorators (`@property`, `@staticmethod`) - Neon Purple (italic)
 - Type annotations - Turquoise
 - Constants (`None`, `True`, `False`) - Amber
@@ -103,7 +103,7 @@ Mexican Night provides exceptional syntax highlighting for Python, Ruby, and Jav
 **Ruby-Specific Elements**
 - Symbols (`:symbol`, `:key`) - Verde Mexicano
 - String interpolation `#{...}` - Rosa Mexicano Light
-- Instance variables (`@var`) - Cyan
+- Instance variables (`@var`) - Mexican Pink (#FF69B4)
 - Class variables (`@@var`) - Magenta
 - Global variables (`$var`) - Cempasúchil Orange (bold)
 - Method definitions - Turquoise
@@ -126,14 +126,14 @@ Mexican Night provides exceptional syntax highlighting for Python, Ruby, and Jav
 - Template expressions `${...}` - Rosa Mexicano Light
 
 **JSX/TSX Support**
-- JSX tags - Deeper Orange
+- JSX tags - Hot Pink (Rosa Mexicano Light)
 - JSX attributes - Marigold Yellow (italic)
-- Component names - Deeper Orange
+- Component names - Hot Pink (Rosa Mexicano Light)
 
 **TypeScript Specific**
-- Type annotations - Turquoise
+- Type annotations - Rosa Mexicano
 - Interfaces - Marigold Yellow
-- Type definitions - Cempasúchil Orange
+- Type names - Mexican Pink (aliases Cempasúchil Orange)
 - Decorators - Rosa Mexicano
 
 **Objects & Functions**
@@ -141,7 +141,7 @@ Mexican Night provides exceptional syntax highlighting for Python, Ruby, and Jav
 - Object keys - Mexican Pink
 - Built-in objects (`document`, `window`) - Cempasúchil Orange
 - Parameters - Marigold Yellow (italic)
-- `this` and `super` - Red Emphasis
+- `this` and `super` - Coral Red
 
 ### 📝 General Language Features
 

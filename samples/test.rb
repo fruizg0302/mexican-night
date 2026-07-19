@@ -121,3 +121,17 @@ module MexicanNight
     puts "Theme loaded successfully"
   end
 end
+
+# Loops (while/until/for)
+counter = 0
+while counter < 5
+  counter += 1
+end
+
+until counter.zero?
+  counter -= 1
+end
+
+for i in 1..3
+  puts i
+end

@@ -1,8 +1,6 @@
 // Syntax Highlighting Colors for Mexican Night Theme
 // Maps palette colors to programming language tokens
 
-import { palette } from './palette.js';
-
 function getSemanticTokenColors(palette) {
   return {
     // Parameters
@@ -61,7 +59,7 @@ function getSemanticTokenColors(palette) {
 
     // Types (TypeScript)
     type: {
-      foreground: palette.neonBlue,         // Turquoise for types
+      foreground: palette.accentCyan,
     },
     "type.declaration": {
       foreground: palette.neonOrange,       // Orange for type declarations
@@ -75,10 +73,10 @@ function getSemanticTokenColors(palette) {
       foreground: palette.neonOrange,
     },
     interface: {
-      foreground: palette.neonOrange,       // Orange for interfaces
+      foreground: palette.neonYellow,
     },
     "interface.declaration": {
-      foreground: palette.neonOrange,
+      foreground: palette.neonYellow,
     },
     enum: {
       foreground: palette.neonOrange,
@@ -113,123 +111,6 @@ function getSemanticTokenColors(palette) {
     },
   };
 }
-
-export const syntaxColors = {
-  // Mexican Night color mappings for syntax highlighting
-
-  // Comments
-  comment: palette.tierraBrown,           // Tierra brown - earthy, subtle
-  commentDoc: palette.tierraBrown,
-
-  // Keywords & Control Flow
-  keyword: palette.rosaMexicano,          // Rosa mexicana - vibrant
-  keywordControl: palette.rosaMexicano,
-  keywordOperator: palette.neonBlue,      // Turquoise
-
-  // Functions & Methods
-  function: palette.neonBlue,             // Turquoise - Mexican jewelry
-  functionCall: palette.neonBlue,
-  method: palette.neonBlue,
-  methodCall: palette.neonBlue,
-
-  // Variables & Parameters
-  variable: palette.textPrimary,          // Use default text for local variables
-  variableProperty: palette.neonOrange,   // Orange for properties (easier on eyes)
-  parameter: palette.neonYellow,
-
-  // Constants & Literals
-  constant: palette.amber,                // Amber - constants/numbers
-  constantBuiltin: palette.amber,
-  constantLanguage: palette.amber,
-
-  // Strings & Regular Expressions
-  string: palette.verdeMexicanoLight,     // Verde bandera
-  stringRegexp: palette.neonPurple,       // Bougainvillea purple
-  stringEscape: palette.rosaMexicano,
-  stringInterpolation: palette.rosaMexicano,
-
-  // Numbers & Booleans
-  number: palette.amber,
-  boolean: palette.amber,
-
-  // Types & Classes
-  type: palette.neonBlue,                 // Turquoise
-  typeBuiltin: palette.neonBlue,
-  class: palette.neonOrange,              // Cempasúchil orange
-  className: palette.neonOrange,
-
-  // Support & Library
-  support: palette.neonBlue,              // Turquoise
-  supportFunction: palette.neonBlue,
-  supportMethod: palette.neonBlue,
-  supportClass: palette.neonOrange,
-  supportType: palette.neonBlue,
-  supportConstant: palette.amber,
-  supportVariable: palette.neonOrange,    // Orange for built-in objects (document, window)
-
-  // Punctuation & Operators
-  punctuation: palette.gray600,
-  punctuationDefinition: palette.gray600,
-  punctuationSection: palette.textPrimary,
-  punctuationTerminator: palette.gray600,
-  operator: palette.neonBlue,             // Turquoise
-
-  // Tags (HTML/JSX)
-  tag: palette.deeperOrange,              // Deeper orange for JSX
-  tagAttribute: palette.neonYellow,
-  tagPunctuation: palette.gray600,
-
-  // Invalid & Deprecated
-  invalid: palette.error,
-  invalidDeprecated: palette.gray500,
-
-  // Ruby-specific (already updated in rubyScopes)
-  rubySymbol: palette.neonBlue,
-  rubyInstanceVariable: palette.neonYellow,
-  rubyClassVariable: palette.deeperOrange,
-  rubyGlobalVariable: palette.redWarning,
-  rubyPseudoVariable: palette.redEmphasis,
-  rubyHeredoc: palette.verdeMexicanoLight,
-  rubyInterpolation: palette.rosaMexicano,
-  rubyRegexp: palette.accentTeal,
-
-  // JavaScript-specific (Mexican Night mapping)
-  jsThis: palette.redEmphasis,            // Red emphasis
-  jsSuper: palette.redEmphasis,
-  jsNull: palette.amber,
-  jsUndefined: palette.amber,
-  jsNan: palette.amber,
-  jsPrototype: palette.neonBlue,
-  jsConstructor: palette.neonBlue,
-  jsDecorator: palette.rosaMexicano,      // Rosa mexicana
-  jsxComponent: palette.deeperOrange,     // Deeper orange
-  jsxAttribute: palette.neonYellow,       // Marigold yellow
-  jsArrowFunction: palette.rosaMexicano,
-  jsTemplateLiteral: palette.verdeMexicanoLight,
-  jsTemplateExpression: palette.rosaMexicano,
-  jsImport: palette.neonPurple,           // Bougainvillea purple
-  jsExport: palette.neonPurple,
-  jsAsync: palette.neonPurple,
-  jsAwait: palette.neonPurple,
-
-  // Storage modifiers
-  storageType: palette.rosaMexicano,
-  storageModifier: palette.rosaMexicano,
-
-  // Entity names
-  entityName: palette.neonOrange,
-  entityNameFunction: palette.neonBlue,
-  entityNameType: palette.neonOrange,
-  entityNameTag: palette.deeperOrange,
-  entityNameSection: palette.neonBlue,
-  entityOther: palette.neonOrange,        // Orange for other entities
-
-  // Meta
-  metaClass: palette.neonOrange,
-  metaFunction: palette.neonBlue,
-  metaSelector: palette.neonPurple,
-  metaProperty: palette.neonBlue,
-};
 
 function getTokenColors(palette) {
   return [
@@ -288,7 +169,6 @@ function getTokenColors(palette) {
       name: "Operator, Misc",
       scope: [
         "keyword.control",
-        "constant.other.color",
         "punctuation",
         "meta.tag",
         "punctuation.definition.tag",
@@ -392,7 +272,6 @@ function getTokenColors(palette) {
       name: "Class, Support",
       scope: [
         "entity.name",
-        "support.type",
         "support.class",
         "support.other.namespace.use.php",
         "meta.use.php",
@@ -475,8 +354,8 @@ function getTokenColors(palette) {
       },
     },
     {
-      name: "entity.name.method.js",
-      scope: ["entity.name.method.js"],
+      name: "entity.name.method",
+      scope: ["entity.name.method.js", "entity.name.method.ts"],
       settings: {
         fontStyle: "italic",
         foreground: palette.neonBlue,
@@ -787,13 +666,6 @@ function getTokenColors(palette) {
       },
     },
     {
-      name: "Markdown - Raw Block Fenced",
-      scope: ["markup.raw.block.fenced.markdown"],
-      settings: {
-        foreground: palette.textDark,
-      },
-    },
-    {
       name: "Markdown - Fenced Bode Block",
       scope: ["punctuation.definition.fenced.markdown"],
       settings: {
@@ -804,7 +676,6 @@ function getTokenColors(palette) {
       name: "Markdown - Fenced Bode Block Variable",
       scope: [
         "markup.raw.block.fenced.markdown",
-        "variable.language.fenced.markdown",
         "punctuation.section.class.end",
       ],
       settings: {
@@ -839,6 +710,8 @@ function getTokenColors(palette) {
       scope: [
         "constant.other.symbol.ruby",
         "constant.other.symbol.hashkey.ruby",
+        "constant.other.symbol.hashkey.parameter.function.ruby",
+        "constant.language.symbol.ruby",
       ],
       settings: {
         foreground: palette.verdeMexicanoLight,
@@ -849,6 +722,13 @@ function getTokenColors(palette) {
       scope: ["punctuation.section.embedded.ruby", "source.ruby.embedded"],
       settings: {
         foreground: palette.rosaMexicano,
+      },
+    },
+    {
+      name: "Ruby - Embedded Source Text",
+      scope: ["source.ruby.embedded.source"],
+      settings: {
+        foreground: palette.textPrimary,
       },
     },
     {
@@ -895,6 +775,7 @@ function getTokenColors(palette) {
       ],
       settings: {
         foreground: palette.rosaMexicano,
+        fontStyle: "italic",
       },
     },
     {
@@ -944,7 +825,7 @@ function getTokenColors(palette) {
     },
     {
       name: "Ruby - Constants",
-      scope: ["variable.other.constant.ruby", "constant.other.symbol.ruby"],
+      scope: ["variable.other.constant.ruby"],
       settings: {
         foreground: palette.neonYellow,
       },
@@ -953,7 +834,7 @@ function getTokenColors(palette) {
       name: "Ruby - Instance Variables",
       scope: [
         "variable.other.readwrite.instance.ruby",
-        "punctuation.definition.variable.ruby",
+        "variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby",
       ],
       settings: {
         foreground: palette.accentCyan,
@@ -961,7 +842,10 @@ function getTokenColors(palette) {
     },
     {
       name: "Ruby - Class Variables",
-      scope: ["variable.other.readwrite.class.ruby"],
+      scope: [
+        "variable.other.readwrite.class.ruby",
+        "variable.other.readwrite.class.ruby punctuation.definition.variable.ruby",
+      ],
       settings: {
         foreground: palette.accentMagenta,
       },
@@ -970,7 +854,8 @@ function getTokenColors(palette) {
       name: "Ruby - Global Variables",
       scope: [
         "variable.other.readwrite.global.ruby",
-        "punctuation.definition.variable.ruby",
+        "variable.other.readwrite.global.pre-defined.ruby",
+        "variable.other.readwrite.global.ruby punctuation.definition.variable.ruby",
       ],
       settings: {
         foreground: palette.neonOrange,
@@ -988,8 +873,9 @@ function getTokenColors(palette) {
       name: "Ruby - Regex",
       scope: [
         "string.regexp.ruby",
-        "punctuation.definition.string.begin.ruby",
-        "punctuation.definition.string.end.ruby",
+        "string.regexp.interpolated.ruby",
+        "string.regexp.ruby punctuation.definition.string.begin.ruby",
+        "string.regexp.ruby punctuation.definition.string.end.ruby",
       ],
       settings: {
         foreground: palette.accentTeal,
@@ -1002,7 +888,6 @@ function getTokenColors(palette) {
         "keyword.operator.comparison.ruby",
         "keyword.operator.logical.ruby",
         "punctuation.separator.method.ruby",
-        "punctuation.separator.variable.ruby",
         "punctuation.separator.key-value.ruby",
       ],
       settings: {
@@ -1030,6 +915,7 @@ function getTokenColors(palette) {
       ],
       settings: {
         foreground: palette.neonOrange,
+        fontStyle: "italic",
       },
     },
     {
@@ -1095,16 +981,6 @@ function getTokenColors(palette) {
       },
     },
     {
-      name: "Ruby - Method Definition Body",
-      scope: [
-        "meta.function.method.with-arguments.ruby",
-        "meta.function.method.without-arguments.ruby",
-      ],
-      settings: {
-        // This ensures method content inherits proper coloring
-      },
-    },
-    {
       name: "Ruby - Block Parameters",
       scope: [
         "variable.other.block.ruby",
@@ -1112,6 +988,7 @@ function getTokenColors(palette) {
       ],
       settings: {
         foreground: palette.neonOrange,
+        fontStyle: "italic",
       },
     },
     {
@@ -1145,8 +1022,14 @@ function getTokenColors(palette) {
     },
     {
       name: "Ruby - Heredoc",
+      scope: ["string.unquoted.heredoc.ruby"],
+      settings: {
+        foreground: palette.verdeMexicanoLight,
+      },
+    },
+    {
+      name: "Ruby - String Delimiters",
       scope: [
-        "string.unquoted.heredoc.ruby",
         "punctuation.definition.string.begin.ruby",
         "punctuation.definition.string.end.ruby",
       ],
@@ -1206,6 +1089,8 @@ function getTokenColors(palette) {
         "keyword.control.export.ts",
         "keyword.control.from.js",
         "keyword.control.from.ts",
+        "keyword.control.as.js",
+        "keyword.control.as.ts",
       ],
       settings: {
         foreground: palette.rosaMexicano,
@@ -1223,6 +1108,7 @@ function getTokenColors(palette) {
       scope: [
         "entity.name.tag.js",
         "entity.name.tag.tsx",
+        "entity.name.tag.jsx",
         "support.class.component.js",
         "support.class.component.tsx",
       ],
@@ -1250,9 +1136,15 @@ function getTokenColors(palette) {
     },
     {
       name: "JS/TS - Console",
-      scope: ["support.class.console.js", "support.class.console.ts"],
+      scope: [
+        "support.class.console.js",
+        "support.class.console.ts",
+        "support.function.console.js",
+        "support.function.console.ts",
+      ],
       settings: {
         foreground: palette.neonBlue,
+        fontStyle: "bold",
       },
     },
     {

@@ -1,8 +1,8 @@
 {
   "name": "mexican-night",
   "displayName": "Mexican Night",
-  "description": "A vibrant dark theme celebrating Mexico City nights with optimized Python, Ruby, and JavaScript/TypeScript syntax highlighting",
-  "version": "1.0.0",
+  "description": "A vibrant dark theme celebrating Mexico City nights with optimized Python, Ruby, JavaScript/TypeScript, Java, and Elixir syntax highlighting",
+  "version": "1.2.0",
   "type": "module",
   "icon": "icon.png",
   "publisher": "mercuryatlas",
@@ -28,7 +28,9 @@
     "python",
     "ruby",
     "javascript",
-    "typescript"
+    "typescript",
+    "java",
+    "elixir"
   ],
   "engines": {
     "vscode": "^1.74.0"
@@ -38,7 +40,9 @@
     "theme": "dark"
   },
   "scripts": {
+    "vscode:prepublish": "npm run build",
     "build": "node src/generator.js",
+    "check": "node scripts/check-theme.mjs",
     "watch": "nodemon --watch src --exec 'npm run build'",
     "package": "vsce package",
     "publish": "vsce publish"
@@ -54,5 +58,9 @@
         "path": "./themes/Mexican Night-color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2",
+    "nodemon": "^3.1.14"
   }
 }

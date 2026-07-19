@@ -1,4 +1,14 @@
 .vscode/**
 .vscode-test/**
+.claude/**
+.superpowers/**
+.github/**
 .gitignore
-vsc-extension-quickstart.md
+.gitattributes
+src/**
+samples/**
+docs/**
+images/**
+scripts/**
+CLAUDE.md
+package-lock.json
